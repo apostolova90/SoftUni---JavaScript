@@ -1,14 +1,13 @@
-function triangleOfNumbers(num){
-
-    for (let i = 1; i <= num; i++){
-        let line = ``;
-        for (let j = 1; j <= i; j++){
-        line += i;
-        if (j !== i){
-            line += " ";
-            }
+function triangleOfNumbers(n){
+ 
+    for(let row = 1; row <= n; row++){
+        let printLine = '';
+ 
+        for(let col = 1; col <= row; col++){
+            printLine += `${row} `;
         }
-        console.log(line);
+ 
+        console.log (printLine);
     }
 }
 triangleOfNumbers(3);

@@ -1,6 +1,4 @@
 function rounding(num, precision){
-    num = Number(num);
-    precision = Number(precision);
 
     if (precision > 15){
         precision = 15;
