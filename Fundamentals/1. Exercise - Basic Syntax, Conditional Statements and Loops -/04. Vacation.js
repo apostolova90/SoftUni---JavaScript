@@ -5,52 +5,40 @@ function vacation(number, type, day) {
     if (type === 'Students'){
  
         switch (day) {
-            case 'Friday':  totalPrice = number * 8.45;
-                
+            case 'Friday':  totalPrice = number * 8.45; 
                 break;
             case 'Saturday': totalPrice = number * 9.80;
-                
                 break;
-            case 'Sunday': totalPrice = number * 10.46;
-                
-                break;
- 
-      
+            case 'Sunday': totalPrice = number * 10.46;               
+                break;      
         }
+
         if (number >= 30){
-            totalPrice *= 0.85
-    
+            totalPrice *= 0.85    
         }
-    } else if (type === 'Busines'){
+
+    } else if (type === 'Business'){
  
         if (number >= 100){
             switch (day) {
-                case 'Friday':  totalPrice = (number - 10) * 10.90;
-                    
+                case 'Friday':  totalPrice = (number - 10) * 10.90;                    
                     break;
-                case 'Saturday': totalPrice = (number - 10) * 15.60;
-                    
+                case 'Saturday': totalPrice = (number - 10) * 15.60;                    
                     break;
-                case 'Sunday': totalPrice = (number - 10) * 16;
-                    
+                case 'Sunday': totalPrice = (number - 10) * 16;                    
                     break;
-        
-        } 
+                } 
         
         } else {
-            
-                switch (day) {
-                    case 'Friday':  totalPrice = number * 10.90;
-                        
-                        break;
-                    case 'Saturday': totalPrice = number * 15.60;
-                        
-                        break;
-                    case 'Sunday': totalPrice = number * 16;
-                        
-                        break;
-            
+            switch (day) {
+                case 'Friday':  totalPrice = number * 10.90;        
+                    break;
+                case 'Saturday': totalPrice = number * 15.60;
+                    break;
+                case 'Sunday': totalPrice = number * 16;                        
+                    break;
             }
+
         }
  
     } else if (type === 'Regular'){
