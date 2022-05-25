@@ -1,8 +1,8 @@
-function fortNumber(num1, num2, num3){
+function sortNumber(num1, num2, num3){
 
-    let minNum = 0;
-    let middleNum = 0;
-    let maxNum = 0;
+    let minNum = Number.MAX_SAFE_INTEGER;
+    let middleNum = Number.MIN_SAFE_INTEGER;
+    let maxNum = Number.MIN_SAFE_INTEGER;
     
 for (let i = 0; i < 3; i++){
     if(maxNum < num1){
@@ -42,8 +42,11 @@ for (let i = 0; i < 3; i++){
 
     }
 
-fortNumber(2,1,3)
-fortNumber(-2,1,3)
-fortNumber(0,0,2)
+    sortNumber(2,1,3)
+sortNumber(-2,1,3)
+sortNumber(0,0,2)
+sortNumber(2,5,2)
 
-................... Judge дава че има грешка
+
+
+.................. Judge дава че има грешка 
