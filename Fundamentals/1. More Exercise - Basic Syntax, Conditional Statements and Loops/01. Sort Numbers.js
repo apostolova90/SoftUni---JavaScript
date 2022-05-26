@@ -42,7 +42,7 @@ for (let i = 0; i < 3; i++){
 
     }
 
-    sortNumber(2,1,3)
+sortNumber(2,1,3)
 sortNumber(-2,1,3)
 sortNumber(0,0,2)
 sortNumber(2,5,2)
