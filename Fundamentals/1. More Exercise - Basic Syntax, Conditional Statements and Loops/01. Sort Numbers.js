@@ -1,7 +1,7 @@
 function sortNumber(num1, num2, num3){
 
     let minNum = Number.MAX_SAFE_INTEGER;
-    let middleNum = Number.MIN_SAFE_INTEGER;
+    let middleNum = 0
     let maxNum = Number.MIN_SAFE_INTEGER;
     
 for (let i = 0; i < 3; i++){
@@ -42,9 +42,9 @@ for (let i = 0; i < 3; i++){
 
     }
 
-sortNumber(2,1,3)
+/* sortNumber(2,1,3)
 sortNumber(-2,1,3)
-sortNumber(0,0,2)
+sortNumber(0,0,2) */
 sortNumber(2,5,2)
 
 
