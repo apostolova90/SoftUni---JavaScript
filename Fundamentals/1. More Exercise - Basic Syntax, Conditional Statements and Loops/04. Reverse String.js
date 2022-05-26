@@ -13,3 +13,15 @@ function reverseString(input) {
     reverseString(`SoftUni`);
     reverseString(`12345`);
 
+
+
+/* друго решение
+
+
+function reverseString(str){
+    const newStr = str.split('').reverse().join('');
+   console.log(newStr);
+ }
+ reverseString(`Hello`);
+ reverseString(`SoftUni`);
+ reverseString(`12345`); */
