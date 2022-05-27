@@ -4,7 +4,7 @@ function sortNumber(num1, num2, num3){
     let middleNum = 0
     let maxNum = Number.MIN_SAFE_INTEGER;
     
-for (let i = 0; i < 3; i++){
+for (let i = 1; i < 3; i++){
     if(maxNum < num1){
         maxNum = num1
     } 
@@ -16,8 +16,8 @@ for (let i = 0; i < 3; i++){
     }
     }
       
-for (let i = 0; i < 3; i++){
-    if(num1 < maxNum){
+for (let i = 1; i < 3; i++){
+    if(minNum > num1){
         minNum = num1
     } 
     if (minNum > num2){
