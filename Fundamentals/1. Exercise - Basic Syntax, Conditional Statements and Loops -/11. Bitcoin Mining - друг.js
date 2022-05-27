@@ -1,3 +1,9 @@
+........................
+
+
+
+/* друг: 
+
 function solve(minedGold) {
     let bitcoinPrice = 11949.16;
     let goldPricePerGram = 67.51;
@@ -32,4 +38,4 @@ function solve(minedGold) {
 
 solve ([100, 200, 300])
 
-.................друг
+ */
