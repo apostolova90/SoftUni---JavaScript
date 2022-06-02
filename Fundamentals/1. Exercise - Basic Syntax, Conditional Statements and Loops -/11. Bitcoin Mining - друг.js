@@ -1,8 +1,6 @@
-........................
 
 
-
-/* друг: 
+//друг: 
 
 function solve(minedGold) {
     let bitcoinPrice = 11949.16;
@@ -38,4 +36,3 @@ function solve(minedGold) {
 
 solve ([100, 200, 300])
 
- */
