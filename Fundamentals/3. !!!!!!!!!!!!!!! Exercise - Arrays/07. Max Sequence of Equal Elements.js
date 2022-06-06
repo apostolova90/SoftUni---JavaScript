@@ -7,7 +7,7 @@ function maxSequenceOfEualElements(array){
     for (let i = 0; i < arrayL; i++) { // цикъл грижещ се за преминаване през целия цикъл
         let currentSequence = []; //държи ВРЕМЕННО най-дългия масив
         for (let j = i; j < arrayL; j++) { // цикъл който се грижи за преминаването от текущото число на дясно
-            if (array[i] === array[j]){ //проверяваме дали 1ислата на първи и втори индекс са с еднаква стойност
+            if (array[i] === array[j]){ //проверяваме дали числата на първи и втори индекс са с еднаква стойност
                 currentSequence.push(array[i])
             } else {
                 break;
