@@ -1,7 +1,11 @@
-function repeatString(){
+function repeatString(string, num){
 
+let output = "" //string
 
+    for(let i = 0; i < num; i++) {
+        output += string
+    }
+    console.log(output)
 }
-repeatString()
-repeatString()
-repeatString()
+repeatString("abc", 3)
+repeatString("String", 2)

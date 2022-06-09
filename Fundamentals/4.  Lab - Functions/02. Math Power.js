@@ -1,7 +1,15 @@
-function mathPower(){
+function mathPower(a, b){
 
+    let result = 1;
+    for (let i = 0; i < b; i++){
+        result = result * a
+
+    }
+
+    console.log(result)
 
 }
-mathPower()
-mathPower()
-mathPower()
+mathPower(2,8)
+mathPower(3,4)
+mathPower(2,8)
+mathPower(3,4)
