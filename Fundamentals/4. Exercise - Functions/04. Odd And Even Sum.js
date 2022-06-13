@@ -19,4 +19,4 @@ console.log(`Odd sum = ${oddSum}, Even sum = ${evenSum}`)
 
 }
 oddAndEven(1000435)
-/* oddAndEven(3495892137259234) */
+oddAndEven(3495892137259234)
