@@ -1,3 +1,7 @@
+друг............
+
+
+
 /* function arrayMod(arr) {
     let str = arr.shift()
     let workArr = str.split(' ')
@@ -53,7 +57,4 @@ arrayMod([
   'end'
 ]
 )
-*/
-
-
-................................................................
+ */

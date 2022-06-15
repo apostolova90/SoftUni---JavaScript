@@ -1,3 +1,6 @@
+85/100............
+
+
 function theLift(array){
 
 
@@ -78,7 +81,7 @@ theLift([
 
 /* 
 
-
+друг опит
 
     function theLift(array){
 
