@@ -22,7 +22,7 @@ function treasureHunt(array) {
     }
 
 
-    function loot(loot) { // взимаме елемента и го слагаме в началото на масива. Ако елемнта вече присъства, не го добавя.
+    function loot(loot) { // взимаме елемента и го слагаме в началото на масива. Ако елемента вече присъства, не го добавя.
         for (let item of loot){
             let hasItem = chestContains.includes(item);
                 if (!hasItem){
@@ -31,7 +31,7 @@ function treasureHunt(array) {
         }
     }
 
-    function drop(index) { //маха елемнта от конкретна позицията (ЧИСЛО) на която се намира и го слага най-отзад
+    function drop(index) { //маха елемента от конкретна позицията (ЧИСЛО) на която се намира и го слага най-отзад
         /* let currentElem = chestContains[index] */  
         if (chestContains[index] !== undefined) {
             let item = chestContains[index]
@@ -40,7 +40,7 @@ function treasureHunt(array) {
         }
     }
 
-    function steal(number){ //o	Someone steals the last count loot items. If there are fewer items than the given count, remove as much as there are. 
+    function steal(number){ //Someone steals the last count loot items. If there are fewer items than the given count, remove as much as there are. 
 //Print the stolen items separated by ", ":
         let startIndex = Math.max(0, chestContains.length - number)
         let stolenItems = chestContains.splice(startIndex, chestContains.length)
