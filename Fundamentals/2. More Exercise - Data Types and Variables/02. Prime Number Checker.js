@@ -1,6 +1,7 @@
-................
 
-function isPrime(number) {
+/* ДРУГ */
+
+function primeNumberChecker(number) {
     let isPrime = true;
     for (let i = 2; i <= Math.floor(number / 2); i++) {
       if (number % i === 0) {
@@ -14,6 +15,6 @@ function isPrime(number) {
       console.log('true');
     }
   }
-  isPrime(7);
-  isPrime(8);
-  isPrime(81);
+  primeNumberChecker(7);
+  primeNumberChecker(8);
+  primeNumberChecker(81);

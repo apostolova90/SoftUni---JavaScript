@@ -1,6 +1,9 @@
-.......................
 
-function printBoard(n) {
+
+/* ДРУГ */
+
+
+function chessBoard(n) {
     let color = 'white';
   
     console.log('<div class="chessboard">');
@@ -19,4 +22,4 @@ function printBoard(n) {
     }
     console.log('</div>');
   }
-  printBoard(3);
+  chessBoard(3);
