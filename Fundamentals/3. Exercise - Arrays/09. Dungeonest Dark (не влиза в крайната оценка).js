@@ -1,3 +1,7 @@
+
+/* 
+ДРУГ */
+
 function dungeonestDark(input) {
     let text = String(input);
     let array = text.split(' ');

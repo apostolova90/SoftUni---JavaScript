@@ -1,11 +1,55 @@
-/* друг  */
+/* решена с Ивайло при подготовка */
+
+function theLift(input) {
+ 
+  let passengers = Number(input.shift());
+  let wagons = input.shift().split(' ').map(Number);
+  let wagonsLength = wagons.length;
+
+ if(passengers){
+  for (let i = 0; i < wagonsLength; i++) {
+
+      let currentWagon = wagons[i];
+
+      while (currentWagon !== 4) {
+          currentWagon++;
+          passengers--;
+          if (passengers === 0) {
+              break;
+          }
+      }
+      wagons[i] = currentWagon;
+      if (passengers === 0) {
+          break;
+      }
+  }
+
+  let isFull = wagons.filter(w => w !== 4);
+
+  if (isFull.length === 0 && passengers === 0) {
+      console.log(wagons.join(' '));
+  } else if (isFull.length !== 0) {
+      console.log('The lift has empty spots!');
+      console.log(wagons.join(' '));
+  } else {
+      console.log(`There isn't enough space! ${passengers} people in a queue!`);
+      console.log(wagons.join(' '));
+  }
+ }
+}
+theLift(["15", "0 0 0 0 0"]);
+theLift(["20", "0 2 0"]);
+theLift(["15", "0 0 0 0 0"]);
+theLift(["13", "0 3 0 4 0"]);
+
+
+/* друг  
 
 function theLift(arr) {
-  // create init values
+
   let waitingPeople = Number(arr.shift());
   const wagons = arr.shift().split(" ").map(Number);
 
-  // implement the logic of each wagon
   for (let i = 0; i < wagons.length; i++) {
     while (wagons[i] < 4 && waitingPeople > 0) {
       wagons[i]++;
@@ -13,7 +57,7 @@ function theLift(arr) {
     }
   }
 
-  // print the output
+
   for (const wagon of wagons) {
     if (wagon < 4) {
       console.log("The lift has empty spots!");
@@ -29,12 +73,21 @@ function theLift(arr) {
   console.log(wagons.join(" "));
 }
 theLift(["15", "0 0 0 0"]);
-
 theLift(["20", "0 2 0"]);
-
 theLift(["15", "0 0 0 0 0"]);
+theLift(["13", "0 3 0 4 0"]); */
 
-theLift(["13", "0 3 0 4 0"]);
+
+
+
+
+
+
+
+
+
+
+
 
 /* MOE - 85/100............
 

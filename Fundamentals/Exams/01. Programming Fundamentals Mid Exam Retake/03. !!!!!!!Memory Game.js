@@ -1,6 +1,61 @@
-.....................85/100
+function memoryGame(input) {
+ 
+    let board = input.shift().split(' ');
+    let command = input.shift();
+    let turns = 1;
+ 
+    while(command !== 'end' && board.length > 0){
+ 
+        let [first, second] = command.split(' ').map(Number) // 
+ 
+        /* let row = commnad.split(' ').map(Number); // по-опростен начин на горното изписване
+        let first = row[0];
+        let second = row[0]; */
+ 
+        let isinvalidInput = (first < 0 || first >= board.length) || (second < 0 || second >= board.length) || first === second
+        if (isinvalidInput) { // when players tries to cheat
+            console.log("Invalid input! Adding additional elements to the board");
+            let middleIndex = Math.floor(board.length / 2);
+            let elementToAdd = `-${turns}a`;
+            board.splice(middleIndex, 0, elementToAdd, elementToAdd);
+        } else { 
+            if(board[first] === board[second]){
+                console.log(`Congrats! You have found matching elements - ${board[first]}!`);
+                board = board.filter((e) => e!==board[first]);
+            } else {
+                console.log("Try again!");
+            }
+        }
+    
+ 
+    if(board.length === 0){
+        console.log(`You have won in ${turns} turns!`);
+        break;
+    }
+    command = input.shift();
+    turns++;
+}
+if (board.length > 0){
+    console.log(`Sorry you lose :(\n${board.join(' ')}`);
+    
+}
+}
+memoryGame(["1 1 2 2 3 3 4 4 5 5", "1 0", "-1 0", "1 0", "1 0", "1 0", "end"]);
+memoryGame(["a 2 4 a 2 4", "0 3", "0 2", "0 1", "0 1", "end"]);
+memoryGame(["a 2 4 a 2 4", "4 0", "0 2", "0 1", "0 1", "end"]);
 
 
+
+
+
+
+
+
+
+
+
+
+/* мое решение .....................85/100
 
 function memoryGame(array) {
  
@@ -59,88 +114,7 @@ function memoryGame(array) {
     }
     
 }
-/* memoryGame(["1 1 2 2 3 3 4 4 5 5", "1 0", "-1 0", "1 0", "1 0", "1 0", "end"]); */
+memoryGame(["1 1 2 2 3 3 4 4 5 5", "1 0", "-1 0", "1 0", "1 0", "1 0", "end"]);
 memoryGame(["a 2 4 a 2 4", "0 3", "0 2", "0 1", "0 1", "end"]);
-/* memoryGame(["a 2 4 a 2 4", "4 0", "0 2", "0 1", "0 1", "end"]);  */
-
-
-/* 
-ДРУГ
-
-
-function memoryGame(input) {
-    let arr = input.shift().split(' ');
-
-    let countMoves = 0;
-    let allMatchingElements = 0;
-    for (let i = 0; i < input.length; i++) {
-        if (input[i] === 'end') {
-            break;
-        }
-        let currentIndexes = input[i].split(' ');
-
-        let firstIndex = currentIndexes[0];
-        let secondIndex = currentIndexes[1];
-        let isTheFirstIndexValid = isItInBounds(firstIndex);
-        let isTheSecondIndexValid = isItInBounds(secondIndex);
-        if (firstIndex === secondIndex || !isTheFirstIndexValid || !isTheSecondIndexValid) {
-            countMoves++;
-            let middleIndexOfArr = middleOfTheArr(arr);
-            let charToInsertInArr = `-${countMoves}a`;
-            arr.splice(middleIndexOfArr, 0, charToInsertInArr, charToInsertInArr);
-            console.log(`Invalid input! Adding additional elements to the board`);
- 
-        } else {
-            if (arr[firstIndex] === arr[secondIndex]) {
-                console.log(`Congrats! You have found matching elements - ${arr[firstIndex]}!`);
-
-                let elementOfSecondIndex = arr[secondIndex];
-                arr.splice(firstIndex, 1);
-                let newIndexOfElement = arr.indexOf(elementOfSecondIndex);
-                arr.splice(newIndexOfElement,1);
-                
-                allMatchingElements++;
-                countMoves++;
-                if (arr.length === 0){
-                    break;
-
-                }
-            } else if (arr[firstIndex] !== arr[secondIndex]) {
-                console.log(`Try again!`);
-            }
-        }
- 
-    }
-    
-    
-    
-    
-    if (allMatchingElements === input.length - 1 || arr.length === 0) {
-        console.log(`You have won in ${countMoves} turns!`);
-    } else {
-        console.log(`Sorry you lose :(\n${arr.join(' ')}`);
-    }
-
-
-
-
-
-
-    function isItInBounds(index) {
-        if (index >= 0 && index < arr.length) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-
-
-
-    function middleOfTheArr(arr) {
-        let theMiddleIndex = Math.floor(arr.length / 2);
-        return theMiddleIndex;
-        
-    }
- 
-} */
+memoryGame(["a 2 4 a 2 4", "4 0", "0 2", "0 1", "0 1", "end"]);  
+ */
