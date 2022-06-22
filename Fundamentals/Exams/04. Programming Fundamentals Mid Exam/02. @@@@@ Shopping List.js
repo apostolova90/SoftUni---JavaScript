@@ -57,7 +57,7 @@ function shopingList(array){
         }
     }
 
-    function correct(function4) {  //ако елемнта съществува в масива, променя имаето му с даденото на втора позиция.Ако го няма прескача командата.
+    function correct(function4) {  //ако елемнта съществува в масива, променя името му с даденото на втора позиция.Ако го няма прескача командата.
             let itemForCorrection = function4.shift(0)
             let itemToCorrect = function4.shift(1)
 

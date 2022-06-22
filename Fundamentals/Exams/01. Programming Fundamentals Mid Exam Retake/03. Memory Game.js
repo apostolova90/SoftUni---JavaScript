@@ -8,9 +8,6 @@ function memoryGame(input) {
  
         let [first, second] = command.split(' ').map(Number) // 
  
-        /* let row = commnad.split(' ').map(Number); // по-опростен начин на горното изписване
-        let first = row[0];
-        let second = row[0]; */
  
         let isinvalidInput = (first < 0 || first >= board.length) || (second < 0 || second >= board.length) || first === second
         if (isinvalidInput) { // when players tries to cheat
