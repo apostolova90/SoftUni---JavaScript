@@ -1,4 +1,3 @@
-
 function manOWar(arr) {
 
     let pirateShipStatus = arr.shift().split('>').map(Number);
@@ -10,7 +9,7 @@ function manOWar(arr) {
     while (command != 'Retire') {
 
         if (command == 'Status') {
-            let sectionToRepair = pirateShipStatus.filter(s => s < maxHealthOfASection * 0.20);
+            let sectionToRepair = pirateShipStatus.filter(s => s < maxHealthOfASection * 0.20); //въртим, за да намерим частите за ремонт, които са тези които са със статус по малко от 20% от максималния helth
             let count = sectionToRepair.length;
             console.log(`${count} sections need repair.`);
         } else {
@@ -21,11 +20,11 @@ function manOWar(arr) {
                 let index = Number(commandAsArr[0]);
                 let damage = Number(commandAsArr[1]);
 
-                if (index >= 0 && index < warShipStatus.length) {
-                    warShipStatus[index] -= damage;
+                if (index >= 0 && index < warShipStatus.length) { //проверяваме дали индекса / позицията съществува - не е по-малък от 0 и не е по-голям от дължината на масива 
+                    warShipStatus[index] -= damage; // ако я има, намеляме 
                 }
 
-                if (warShipStatus[index] <= 0) {
+                if (warShipStatus[index] <= 0) { //ако дължината ня някоя част е по-малка или равна на 0, бием, а пиратите губят
                     isSunken = true;
                     console.log('You won! The enemy ship has sunken.');
                     break;
@@ -36,12 +35,12 @@ function manOWar(arr) {
                 let endIndex = Number(commandAsArr[1]);
                 let damage = Number(commandAsArr[2]);
 
-                if ((startIndex >= 0 && startIndex < pirateShipStatus.length) &&
+                if ((startIndex >= 0 && startIndex < pirateShipStatus.length) && //проверяваме дали индексите / позициите съществуват - не е по-малък от 0 и не е по-голям от дължината на масива 
                     (endIndex >= 0 && endIndex < pirateShipStatus.length)) {
                     for (let i = startIndex; i <= endIndex; i++) {
                         pirateShipStatus[i] -= damage;
 
-                        if (pirateShipStatus[i] <= 0) {
+                        if (pirateShipStatus[i] <= 0) { //ако дължината ня някоя част е по-малка или равна на 0, бием, а пиратите губят
                             isSunken = true;
                             console.log('You lost! The pirate ship has sunken.');
                             break;
@@ -53,10 +52,10 @@ function manOWar(arr) {
                 let index = Number(commandAsArr[0]);
                 let health = Number(commandAsArr[1]);
 
-                if (index >= 0 && index < pirateShipStatus.length) {
-                    pirateShipStatus[index] += health;
-                    if (pirateShipStatus[index] > maxHealthOfASection) {
-                        pirateShipStatus[index] = maxHealthOfASection;
+                if (index >= 0 && index < pirateShipStatus.length) { //ако дължината ня някоя част е по-малка или равна на 0, бием, а пиратите губят
+                    pirateShipStatus[index] += health; //ако я има добавяме
+                    if (pirateShipStatus[index] > maxHealthOfASection) { // ако придобития helth е повече от максимално зададения в на1алото, 
+                        pirateShipStatus[index] = maxHealthOfASection;  // го изравняваме до стойността на максималния
                     }
                 }
             }
@@ -66,8 +65,8 @@ function manOWar(arr) {
     }
 
     if (!isSunken) {
-        let sumOfPirateShipSections = pirateShipStatus.reduce((a, b) => a + b, 0);
-        let sumOfWarShipSections = warShipStatus.reduce((a, b) => a + b, 0);
+        let sumOfPirateShipSections = pirateShipStatus.reduce((a, b) => a + b, 0); // смятаме сумата helth-a на всички части
+        let sumOfWarShipSections = warShipStatus.reduce((a, b) => a + b, 0); // смятаме сумата helth-a на всички части
         console.log(`Pirate ship status: ${sumOfPirateShipSections}\nWarship status: ${sumOfWarShipSections}`);
     }
 }
@@ -78,9 +77,19 @@ manOWar(["2>3>4>5>2",
     "Fire 2 3",
     "Defend 0 4 11",
     "Repair 3 18",
-    "Retire"]);
+    "Retire"]); 
 
-
+manOWar(["12>13>11>20>66",
+    "12>22>33>44>55>32>18",
+    "70",
+    "Fire 2 11",
+    "Fire 8 100",
+    "Defend 3 6 11",
+    "Defend 0 3 5",
+    "Repair 1 33",
+    "Status",
+    "Retire"])
+    
 
 
 
