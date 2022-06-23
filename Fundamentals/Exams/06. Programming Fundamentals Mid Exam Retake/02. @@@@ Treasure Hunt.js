@@ -22,11 +22,11 @@ function treasureHunt(array) {
     }
 
 
-    function loot(loot) { // взимаме елемента и го слагаме в началото на масива. Ако елемента вече присъства, не го добавя.
-        for (let item of loot){
+    function loot(loot) { 
+        for (let item of loot){ //въртим през елементите и търсим дали дадения елемент присъства
             let hasItem = chestContains.includes(item);
                 if (!hasItem){
-                    chestContains.unshift(item)
+                    chestContains.unshift(item)// Ако ДА, взимаме елемента и го слагаме в началото на масива. Ако елемента вече присъства, не го добавя.
                 }
         }
     }
@@ -42,8 +42,8 @@ function treasureHunt(array) {
 
     function steal(number){ //Someone steals the last count loot items. If there are fewer items than the given count, remove as much as there are. 
 //Print the stolen items separated by ", ":
-        let startIndex = Math.max(0, chestContains.length - number)
-        let stolenItems = chestContains.splice(startIndex, chestContains.length)
+        let startIndex = Math.max(0, chestContains.length - number) //задаваме стартовата позиция, която е 5 
+        let stolenItems = chestContains.splice(startIndex, chestContains.length) // и принтираме останалите, които са откраднати
         console.log(stolenItems.join(", "))
     }
 
@@ -54,7 +54,7 @@ function treasureHunt(array) {
             counter += wordLength
         }
 
-    let numberOfElements = chestContains.length;
+    let numberOfElements = chestContains.length; //проверяваме дали замива е празен
         if (numberOfElements > 0){ 
             let averageGain = counter / numberOfElements
             console.log(`Average treasure gain: ${averageGain.toFixed(2)} pirate credits.`)

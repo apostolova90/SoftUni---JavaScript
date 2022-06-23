@@ -6,24 +6,27 @@ function numbers(sequence){
  
     for(let el of arrOfStrings){
         
-        let currentNumber = Number(el)
-        arrOfNumbers.push(currentNumber);
-        sum += currentNumber;
+        let currentNumber = Number(el)     //въртим през елементите в масива,
+        arrOfNumbers.push(currentNumber); //за да запишем всички в нов масив
+        sum += currentNumber;             //и да им сметнем сбора
     }
  
-    let average = sum / arrOfNumbers.length;
+    let average = sum / arrOfNumbers.length; //общия сбор ни трябва, за да разберем коя е средната им стойност
     
  
-    let greaterThanAverage = [];
- 
-    for (let el of arrOfNumbers){
-        if(el > average){
-            greaterThanAverage.push(el);
+    let topFive = [];   //създаваме още един масив, къдет да запазваме всики елемнти, 
+                                   //които са по-големи от средната стойност
+
+   arrOfStrings = arrOfStrings.sort((a, b) => b - a)  //обръща реда на елементите в масива
+    for (let i = 0; i < 5; i++) {
+        if (arrOfStrings[i] > average) {    //минава през елементите в масива и ако са по-големи от средната стойност
+            topFive.push(arrOfStrings[i]);   //ги слага в новия масив
         }
     }
-    greaterThanAverage.sort((a,b) => b-a);
-    for (let i = 0; i < 5 && i < greaterThanAverage.length; i++){
-        console.log(greaterThanAverage[i])
+    if (topFive.length > 0) {  //ако елемнтите в новия масив са повече от 0
+        console.log(topFive.join(' '));
+    } else {  //ако са по-малко от 0
+        console.log('No');
     }
 }
 numbers('10 20 30 40 50');

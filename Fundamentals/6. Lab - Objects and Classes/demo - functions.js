@@ -6,7 +6,7 @@ function objectCreator(fn, ln, a){ //параметри зададени в ин
     let person = {
         firstName: fn, // за разлика от масивите, тук именоваме всеки елемнт от обекта, 
         lastName: ln, // за да го достъпим по-нататък в кода
-        age: a
+        age: a,
         sayHello(){console.log('Hello')}  // първи на1ин
     }
 

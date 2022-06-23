@@ -29,7 +29,7 @@ function shopingList(array){
 
 
 
-    function urgent(functionOne) {  //добавяме елемнт в началот на масива
+    function urgent(functionOne) {  //добавяме елемeнт в началот на масива
         for (let item of functionOne){
             let hasItem = listWithGroceries.includes(item);
                 if (!hasItem){
@@ -38,16 +38,16 @@ function shopingList(array){
         }
     }
 
-    function unnecessary(functionTwo) {  // маха даден елемент от масив, само ако съществува. Ако го няма прескача командата.
+    function unnecessary(functionTwo) {  // махаме даден елемент от масив, само ако съществува. Ако го няма прескача командата.
         for (let unnecessatyItem of functionTwo){
             let hasUnnecessatyItem = listWithGroceries.includes(unnecessatyItem);
                 if (hasUnnecessatyItem){
-                    listWithGroceries.splice(listWithGroceries.indexOf(unnecessatyItem), 1) //маха определена дума от масива
+                    listWithGroceries.splice(listWithGroceries.indexOf(unnecessatyItem), 1) //махаме определена дума от масива
             }
         }
     }
 
-    function rearrange(functionTwo3) {  //ако елемента присъства в масива, го маха от неговата позиция и го слага накрая на масива.Ако го няма прескача командата.
+    function rearrange(functionTwo3) {  // махаме елемента от неговата позиция и го слага накрая на масива, ако елемента присъства в масива. Ако го няма прескача командата.
         for (let itemToMove of functionTwo3){
             let hasItemToMove = listWithGroceries.includes(itemToMove);
                 if (hasItemToMove){
@@ -57,7 +57,7 @@ function shopingList(array){
         }
     }
 
-    function correct(function4) {  //ако елемнта съществува в масива, променя името му с даденото на втора позиция.Ако го няма прескача командата.
+    function correct(function4) {  //ако елемента съществува в масива, променя името му с даденото на втора позиция. Ако го няма прескача командата.
             let itemForCorrection = function4.shift(0)
             let itemToCorrect = function4.shift(1)
 

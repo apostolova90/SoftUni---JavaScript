@@ -1,7 +1,6 @@
 
-
-
 /* ИЗЦЯЛО МОЕ РЕШЕНИЕ */
+
 
 function arrayMod(arr) {
 
@@ -23,7 +22,7 @@ function arrayMod(arr) {
             temp = workingArray[x];
             workingArray[x] = workingArray[y]
             workingArray[y] = temp
-        } else if (commandToFollow === 'multiply'){  // ДА УМНОЖИМ ЧИСЛОТО НА ПЪРВА ПОЗИЦИЯ, С ЧИСЛОТО ОТ ВТОРА ПОЗИЦИЯ
+        } else if (commandToFollow === 'multiply'){  //КОГАТО ИСКАМЕ ДА УМНОЖИМ ЧИСЛОТО НА ПЪРВА ПОЗИЦИЯ, С ЧИСЛОТО ОТ ВТОРА ПОЗИЦИЯ
             let o = Number(commandAsArr[1]);    
             let j = Number(commandAsArr[2]);     
             temp = workingArray[o] * workingArray[j]; 

@@ -58,8 +58,6 @@ function theLift(arr) {
       waitingPeople--;
     }
   }
-
-
   for (const wagon of wagons) {
     if (wagon < 4) {
       console.log("The lift has empty spots!");
@@ -172,9 +170,6 @@ function theLift(array){
         console.log("The lift has empty spots!")
         console.log(`${newArrayOfWagons.join(' ')}`)
     }
-
-
-
 
 }
 theLift([

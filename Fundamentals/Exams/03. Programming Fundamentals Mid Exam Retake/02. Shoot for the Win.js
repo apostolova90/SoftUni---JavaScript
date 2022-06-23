@@ -11,15 +11,15 @@ function shootForTheWin(arr) {
    
     while (command !== "End") {
       let shots = Number(command);
-      if (targetsArray.includes(targetsArray[shots])) {
+      if (targetsArray.includes(targetsArray[shots])) { // проверяваме дали даденият индекс присъства в масива
         targetsShot++;
-        previousValue = targetsArray[shots];
-        targetsArray.splice(shots, 1, -1);
-        for (let i = 0; i < targetsArray.length; i++) {
-          if (targetsArray[i] !== -1 && targetsArray[i] <= previousValue) {
-            targetsArray[i] += previousValue;
-          } else if (targetsArray[i] > 0 && targetsArray[i] > previousValue) {
-            targetsArray[i] -= previousValue;
+        previousValue = targetsArray[shots];  // запазваме стойността под нова променлива
+        targetsArray.splice(shots, 1, -1);  // заменяме числото на дадената позиция с -1
+        for (let i = 0; i < targetsArray.length; i++) {  //след това минаваме през всички елементи в масива
+          if (targetsArray[i] !== -1 && targetsArray[i] <= previousValue) { // прескачаме дадено число -1 
+            targetsArray[i] += previousValue; //и ако е по-малко или = на запазената по-горе стойност, увеличаваме 
+          } else if (targetsArray[i] > 0 && targetsArray[i] > previousValue) { // прескачаме дадено число -1 
+            targetsArray[i] -= previousValue; //и ако е по-голямо или = на запазената по-горе стойност, намаляме 
           }
         }
       }
