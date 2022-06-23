@@ -29,23 +29,26 @@ function inventory(arr) {
                 if (hasItem){
                     journal.splice(start + 1, 0, secondItem) 
             }
-        } else if (command == "Renew"){   // ако елемента съществува, го взимаме/изтривам еот неговото място и слагаме най-одзад
+        } else if (command == "Renew"){   // ако елемента съществува, го взимаме/изтривам от неговото място и слагаме най-одзад
             let hasItem = journal.includes(item);
             let positionToDelete = journal.indexOf(item)
                 if (hasItem){
                     journal.push(item)
                     journal.splice(positionToDelete, 1)
+/*                     ИЛИ така:
+                    journal.splice(journal.indexOf(item), 1)
+                    journal.push(item) */
                 }
         
         } 
  
     }
  
- 
 console.log(journal.join(", "))
+
 }
-/* inventory(["Iron, Wood, Sword", "Collect - Gold", "Drop - Wood", "Craft!"]);
-console.log("___________________________") */
+inventory(["Iron, Wood, Sword", "Collect - Gold", "Drop - Wood", "Craft!"]);
+console.log("___________________________")
 inventory(["Iron, Sword", "Drop - Bronze",  "Combine Items - Sword:Bow",  "Renew - Iron",  "Craft!",]);
 
 

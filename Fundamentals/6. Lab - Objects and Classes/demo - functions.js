@@ -1,12 +1,16 @@
+// как да пишем функции, вътре в обектите:
+
+
 function objectCreator(fn, ln, a){ //параметри зададени в инпута
 
     let person = {
         firstName: fn, // за разлика от масивите, тук именоваме всеки елемнт от обекта, 
-                       // за да го достъпим по-нататък в кода
-        lastName: ln,
+        lastName: ln, // за да го достъпим по-нататък в кода
         age: a
+        sayHello(){console.log('Hello')}  // първи на1ин
     }
-    return person
+
+    person.sayGoodbye = () => console.log('Bye') // втори начин
 
 }
 

@@ -31,7 +31,7 @@ function treasureHunt(array) {
         }
     }
 
-    function drop(index) { //маха елемента от конкретна позицията (ЧИСЛО) на която се намира и го слага най-отзад
+    function drop(index) { //маха елемента от конкретна позицията (ЧИСЛО) на която се намира и го слагаме най-отзад
         /* let currentElem = chestContains[index] */  
         if (chestContains[index] !== undefined) {
             let item = chestContains[index]

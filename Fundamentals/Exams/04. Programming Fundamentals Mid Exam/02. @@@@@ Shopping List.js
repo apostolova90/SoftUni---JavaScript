@@ -47,7 +47,7 @@ function shopingList(array){
         }
     }
 
-    function rearrange(functionTwo3) {  //ако елента присъства в масива, го маха от неговата позиция и го слага накрая на масива.Ако го няма прескача командата.
+    function rearrange(functionTwo3) {  //ако елемента присъства в масива, го маха от неговата позиция и го слага накрая на масива.Ако го няма прескача командата.
         for (let itemToMove of functionTwo3){
             let hasItemToMove = listWithGroceries.includes(itemToMove);
                 if (hasItemToMove){
