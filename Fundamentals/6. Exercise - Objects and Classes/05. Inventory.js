@@ -20,12 +20,12 @@ function inventory(inputArray){
     }
 
 
-    let sortedByLevel = heroes.sort((a,b) => {   // така ще сортираме по level
+    let sortedByLevel = heroes.sort((a,b) => {   // така ще СОРТИРАМЕ по level   
         return a.level - b.level;
     })
 
     
-for (const hero of sortedByLevel){ //минаваме през всички елемнти, за да ги изкараме накрая
+for (const hero of sortedByLevel){ //минаваме през всички елементи, за да ги изкараме накрая
     console.log(`Hero: ${hero.name}`)
     console.log(`level => ${hero.level}`)
     console.log(`items => ${hero.items}`)

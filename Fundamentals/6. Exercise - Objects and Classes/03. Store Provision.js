@@ -16,7 +16,7 @@ function storeProvision(currentsStorcks, forDelivery){
         if (!storeProducts.hasOwnProperty(product)){  //казваме: ако нещо го няма налично в магазина
             storeProducts[product] = 0; // кажи му че има количество 0
         }
-        storeProducts[product] += Number(forDelivery[j+1]) // и в последствие му добави стойностт
+        storeProducts[product] += Number(forDelivery[j+1]) // и в последствие му добави стойност
         // ако не влезе в горната проверка (т.е. ако го има), просто ще му добави допълнителния брой
     }
     

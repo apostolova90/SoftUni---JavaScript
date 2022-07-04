@@ -11,7 +11,7 @@ function towns(arrayInput){
         let townLatitute = Number(cityElements[1]); // 42.696552
         let townLongtitute = Number(cityElements[2]); // 23.32601
 
-        // наливаме еемнтите в отделните части на обекта
+        // наливаме елементите в отделните части на обекта
         currentTown.town = townName; 
         currentTown.latitude = townLatitute.toFixed(2);
         currentTown.longitude = townLongtitute.toFixed(2);
