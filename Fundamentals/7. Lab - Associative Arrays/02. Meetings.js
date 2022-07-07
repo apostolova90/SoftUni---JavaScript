@@ -1,21 +1,29 @@
+
+
+// АЗ
+
+// определено действие при повтарящ се ключ (повтарящо се име)
+
 function meetings(array){
 
-    let result = {};
+    let meetings = {};
 
-    for (let line of array){  // завъртаме през вси1ки елемнти в масива
+    for (let lienInfo of array){  // завъртаме през всички елементи в масива
+        let [day, name] = lienInfo.split(" ") // записваме под различни променливи всеки елемент от всеки отделен елемент в масива
 
-    let [day, name] = line.split(" ");  // записваме под различни променливи всеки елемнт от всеки отделен елемнт в масива
-        if (result.hasOwnProperty(day)) { // проверяваме дали денят се повтаря
-            console.log(`Conflict on ${day}!`) // ако се повтаря някъде
+        if (meetings.hasOwnProperty(day)){  // проверяваме дали деня се повтаря
+           console.log(`Conflict on ${day}!`); // ако се повтаря принтираме следното:
         } else { // ако не се повтаря
-            result[day] = name;
-            console.log(`Scheduled for ${day}`);
+            meetings[day] = name // записваме в обекта, името към съответния ден
+            console.log(`Scheduled for ${day}`)
         }
     }
-    console.log(result)
-    for (let [key, value] of Object.entries(result)) {
-        console.log(`${key} -> ${value}`)
+
+    for (let [day, name] of Object.entries(meetings)){ // с Object.entries() връща масив от двойка елемнети от даден обект - ключ и стойност 
+                                                       // + ги записваме като нови променлизи, за да шринтираме после с тях
+        console.log(`${day} -> ${name}`)
     }
+
 }
 meetings([
 'Monday Peter',
@@ -24,10 +32,16 @@ meetings([
 'Friday Tim'
 ])
 
-/* meetings([
+meetings([
 'Friday Bob',
 'Saturday Ted',
 'Monday Bill',
 'Monday John',
 'Wednesday George'
-]) */
+])
+
+
+
+
+
+
