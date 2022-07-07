@@ -91,12 +91,7 @@ function flightSchedule(input) {
 
 
 
-
-
-
-
-
-    // решение с калс - от упражнение с Тошко
+    // решение с клaс - от упражнение с Тошко
 
     /* function flightSchedule(data) {
       class Flight {

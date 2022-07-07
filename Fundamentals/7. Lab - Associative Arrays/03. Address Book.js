@@ -1,7 +1,5 @@
 // АЗ
-
 // сортиране по keys (имена)
-
 // замяна на стойност при повтарящ се key 
 
 function adressBook(array){
@@ -22,8 +20,6 @@ function adressBook(array){
     for (let key of sorted) {      // завъртам през масива с новите преподредени ключове 
         console.log(key,"->",adressObject[key])   // и принтирам тях и свързаните към тях (в обекта) стойности
         } 
-
-
 }
 adressBook([
 'Tim:Doe Crossing',

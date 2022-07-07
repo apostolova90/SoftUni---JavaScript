@@ -1,9 +1,6 @@
 //АЗ
-
 // решена с обект
-
 // сортиране на стойност
-
 function wordOccurrences(array) {
   
     let obj = {}

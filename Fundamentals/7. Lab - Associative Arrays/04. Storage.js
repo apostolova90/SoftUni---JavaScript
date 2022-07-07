@@ -1,8 +1,6 @@
 
 // АЗ
-
 // добавяне на стойност към стара стойност
-
 function storage(array){
 
 let map = new Map()
@@ -21,7 +19,6 @@ for (let lineInfo of array){
     for (let [key, value] of map.entries()) { // после минавам през .map и взимам двойките (клуч и стойност), за д амога да принтирам след това 
         console.log(key, "->", value)
     }
-
 }
 storage(['tomatoes 10',
 'coffee 5',
