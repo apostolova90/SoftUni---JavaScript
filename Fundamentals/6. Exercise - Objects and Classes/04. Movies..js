@@ -45,11 +45,11 @@ movies([
     'Fast and Furious directedBy Rob Cohen'
     ])
 
-/* movies([
+movies([
     'addMovie The Avengers',
     'addMovie Superman',
     'The Avengers directedBy Anthony Russo',
     'The Avengers onDate 30.07.2010',
     'Captain America onDate 30.07.2010',
     'Captain America directedBy Joe Russo'
-    ]) */
+    ])

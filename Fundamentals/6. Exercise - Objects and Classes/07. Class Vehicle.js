@@ -20,4 +20,4 @@ console.log(vehicle.fuel);
 console.log(vehicle.parts.quality);
 
 
-// кода минава в Judge, но п някаква причина тук дава грешка
+// кода минава в Judge, но по някаква причина тук дава грешка
