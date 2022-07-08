@@ -1,5 +1,6 @@
 function cardGame(array){
 
+................
 
 }
 cardGame([
