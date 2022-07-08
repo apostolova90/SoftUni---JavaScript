@@ -52,7 +52,7 @@ piccolo([
 
 // със .set
 
-/* function piccolo(arr) {
+function piccolo(arr) {
     let parkingLot = new Set();
 
     for (let line of arr) {
@@ -68,7 +68,7 @@ piccolo([
     if (parkingLot.size === 0) {
         console.log("Parking Lot is Empty");
     } else {
-        let result = Array.from(parkingLot);
+        let result = Array.from(parkingLot); //превръщаме set в масив
         result.sort();
         for (let car of result) {
             console.log(car);
@@ -93,7 +93,7 @@ piccolo([
     'IN, CA1234TA',
     'OUT, CA2844AA',
     'OUT, CA1234TA'])
- */
+
 
 
 
