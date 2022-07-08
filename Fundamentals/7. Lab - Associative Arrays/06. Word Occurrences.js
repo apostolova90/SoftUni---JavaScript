@@ -5,7 +5,7 @@ function wordOccurrences(array) {
   
     let obj = {}
 
-    for (let word of array){ //мианваме през вси1ки елемнти в масива
+    for (let word of array){ //мианваме през всички елемeнти в масива
         if (!obj.hasOwnProperty(word)){ // и казваме, че ако елемента го няма (т.е. е само 1 на брой)
             obj[word] = 1 // стойността към сменящия се ключ трябва да е равна на 1 - {is: 1, the: 1, first: 1, sentence: 1}
         } else {
