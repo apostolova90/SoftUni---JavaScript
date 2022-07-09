@@ -1,7 +1,56 @@
+//АЗ
+
+
+/* function worldTour(array) {
+
+    let workingArray = array.shift() //взимаме първата част върху която ще работим
+      
+    for (let line of array) {
+      //въртим през всеки елемент от масива
+      let lineInfo = line.split(":"); // и разделяме отделните части на елемента
+      let command = lineInfo[0]; // и записваме всяка една от тях под отделна променлива
+      let index = lineInfo[1];
+      let another = lineInfo[2];
+  
+      if (command === "Travel") {
+        break;
+      }
+  
+      switch (command) {
+        case "Add Stop": 
+        index = Number(index)
+            if (index > 0 && index < workingArray.length){
+                let first = workingArray.substring(0, index);
+                let second = workingArray.substring(index, workingArray.length);
+                workingArray = first + another + second;
+                console.log(workingArray);
+            }
+          break;
+
+        case "Remove Stop":
+          break;
+
+        case "Switch":
+          break;
+      }
+    }
+      
+}
+worldTour([
+"Hawai::Cyprys-Greece",
+"Add Stop:7:Rome",
+"Remove Stop:11:16",
+"Switch:Hawai:Bulgaria",
+"Travel"]); */
+                                                
+
+
+
+
+
+
 
 // друг
-
-
 
 /* function worldTour(arr) {
 
