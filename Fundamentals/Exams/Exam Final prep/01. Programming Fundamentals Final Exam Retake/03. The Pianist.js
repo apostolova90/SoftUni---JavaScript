@@ -1,16 +1,16 @@
 
 // друг
 
-/* function thePianist(arr) {
+function thePianist(arr) {
 
     let pieces = {};
-    let num = Number(arr.shift());
+    let num = Number(arr.shift()); // отделяме чилото  ---- '3'
 
-    for (let i = 0; i < num; i++) {
-        let tokens = arr.shift().split('|');
-        let piece = tokens[0];
-        let composer = tokens[1];
-        let key = tokens[2];
+    for (let i = 0; i < num; i++) { // въртим до числото, което сме получили в началото на масива
+        let tokens = arr.shift().split('|'); //отделяме всеки елемент от всеки ред и го записваме под нова променлива
+        let piece = tokens[0];      //Fur Elise, Moonlight Sonata, Clair de Lune
+        let composer = tokens[1];  // Beethoven, Beethoven, Debussy
+        let key = tokens[2];      //Minor, C# Minor, C# Minor
         if (!pieces.hasOwnProperty(piece)) {
             pieces[piece] = [];
             pieces[piece].push(composer);
@@ -18,46 +18,47 @@
         }
     }
 
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] === "Stop") {
+for (let i = 0; i < arr.length; i++) { // след това започвамe да въртим през останалите елементи, които са останали в масива
+        if (arr[i] === "Stop") { // казваме какво да стане при команда "stop"
             break;
         }
-        let tokens = arr[i].split('|');
-        let command = tokens[0];
+        let tokens = arr[i].split('|'); // делим елементите на всеки ред ----  'Add|Sonata No.2|Chopin|B Minor'   =>   'Add', 'Sonata No.2', 'Chopin', 'B Minor'
+        let command = tokens[0]; // отделяме командата, за да знаем какво да правим
+
         if (command === "Add") {
-            let piece = tokens[1];
-            let composer = tokens[2];
-            let key = tokens[3];
-            if (!pieces.hasOwnProperty(piece)) {
-                pieces[piece] = [];
+            let piece = tokens[1]; // записваме първата променлива
+            let composer = tokens[2]; // записваме втората променлива
+            let key = tokens[3]; // записваме третата променлива
+            if (!pieces.hasOwnProperty(piece)) { // проверяваме дали piese го НЯМА в глявния масив
+                pieces[piece] = []; // ако го няма добавяме елемнтите в главния обект
                 pieces[piece].push(composer);
                 pieces[piece].push(key);
-                console.log(`${piece} by ${composer} in ${key} added to the collection!`);
+                console.log(`${piece} by ${composer} in ${key} added to the collection!`); // и принтираме:
             } else {
-                console.log(`${piece} is already in the collection!`);
+                console.log(`${piece} is already in the collection!`); // ако го има принтираме това:
             }
         } else if (command === "Remove") {
-            let piece = tokens[1];
-            if (pieces.hasOwnProperty(piece)) {
-                delete pieces[piece];
-                console.log(`Successfully removed ${piece}!`);
+            let piece = tokens[1]; // записваме първата променлива
+            if (pieces.hasOwnProperty(piece)) { // проверяваме дали piese го има в глявния масив
+                delete pieces[piece]; //ако го има, го изтриваме 
+                console.log(`Successfully removed ${piece}!`); // и принтираме:
             } else {
-                console.log(`Invalid operation! ${piece} does not exist in the collection.`);
+                console.log(`Invalid operation! ${piece} does not exist in the collection.`); // ако го няма принтираме това:
             }
         } else if (command === "ChangeKey") {
-            let piece = tokens[1];
-            let newKey = tokens[2];
-            if (pieces.hasOwnProperty(piece)) {
-                pieces[piece][1] = newKey;
-                console.log(`Changed the key of ${piece} to ${newKey}!`);
+            let piece = tokens[1]; // записваме първата променлива
+            let newKey = tokens[2]; // записваме втората променлива
+            if (pieces.hasOwnProperty(piece)) {  // проверяваме дали piese го има в глявния масив
+                pieces[piece][1] = newKey; //ако го има, го подменяме
+                console.log(`Changed the key of ${piece} to ${newKey}!`); // и принтираме:
             } else {
-                console.log(`Invalid operation! ${piece} does not exist in the collection.`);
+                console.log(`Invalid operation! ${piece} does not exist in the collection.`); //ако го няма принтираме:
             }
         }
     }
 
-    for (let key of Object.keys(pieces)) {
-        console.log(`${key} -> Composer: ${pieces[key][0]}, Key: ${pieces[key][1]}`);
+    for (let key of Object.keys(pieces)) { // накрая минаваме през всички keys 
+        console.log(`${key} -> Composer: ${pieces[key][0]}, Key: ${pieces[key][1]}`); //и принтираме
     }
 }
 
@@ -72,7 +73,7 @@ thePianist([
     'Remove|Clair de Lune',
     'ChangeKey|Moonlight Sonata|C# Major',
     'Stop'
-]) */
+])
 
 
 
