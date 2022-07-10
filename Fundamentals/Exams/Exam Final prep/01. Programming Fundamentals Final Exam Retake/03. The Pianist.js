@@ -1,5 +1,5 @@
 
-// друг
+// ДРУГ, с мой коментари
 
 function thePianist(arr) {
 

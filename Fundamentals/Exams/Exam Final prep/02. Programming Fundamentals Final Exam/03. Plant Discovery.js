@@ -1,5 +1,5 @@
 
-// друг
+// АЗ
 
 
 function plantDiscovery(arr) {
