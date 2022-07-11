@@ -14,6 +14,7 @@ function needForSpeed(arr) {
           
           allCars[car].push(distance);
             allCars[car].push(fuel);
+            console.log(allCars[car]);
     }
 
 
