@@ -42,7 +42,6 @@ function plantDiscovery(arr) {
                 plantColection[plant].push(rating); // ако го ИМА добавяме рейтинга в главния обект ------- от това [7], става това - [7, 10]
                 }
 
-
         } else if (command === "Update"){
             let plant = splitted[0];
             let rarity = Number(splitted[1]);

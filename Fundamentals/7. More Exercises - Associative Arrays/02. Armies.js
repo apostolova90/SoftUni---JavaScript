@@ -47,7 +47,7 @@ function armies(arr) {
         }
         value.unshift(total); // добавяме общия сбор в началото на масива
     }
-
+    
     let sortedTotal = Object.entries(leaders).sort(([keyA, valueA], [keyB, valueB]) => valueB[0] - valueA[0]); // сортираме
 
     for (let key of sortedTotal) { // минаваме през сортирания обект 

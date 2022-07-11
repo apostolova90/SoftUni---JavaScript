@@ -37,6 +37,7 @@ for (let i = 0; i < arr.length; i++) { // след това започвамe д
             } else {
                 console.log(`${piece} is already in the collection!`); // ако го има принтираме това:
             }
+
         } else if (command === "Remove") {
             let piece = tokens[1]; // записваме първата променлива
             if (pieces.hasOwnProperty(piece)) { // проверяваме дали piese го има в глявния масив
@@ -45,6 +46,8 @@ for (let i = 0; i < arr.length; i++) { // след това започвамe д
             } else {
                 console.log(`Invalid operation! ${piece} does not exist in the collection.`); // ако го няма принтираме това:
             }
+
+
         } else if (command === "ChangeKey") {
             let piece = tokens[1]; // записваме първата променлива
             let newKey = tokens[2]; // записваме втората променлива
@@ -54,6 +57,8 @@ for (let i = 0; i < arr.length; i++) { // след това започвамe д
             } else {
                 console.log(`Invalid operation! ${piece} does not exist in the collection.`); //ако го няма принтираме:
             }
+
+
         }
     }
 
