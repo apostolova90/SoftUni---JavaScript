@@ -17,7 +17,7 @@ function armies(arr) {
             } else if (leaders.hasOwnProperty(leader) && command === "defeated") { // ако пък го има и командата е defeated
                 delete leaders[leader];  // изтриваме лидера
             }
-        } else if (arr[i].includes(":")) { // ако някой от елемнтите съдържа : 
+        } else if (arr[i].includes(":")) { // ако някой от елементите съдържа : 
             let tokens = arr[i].split(': '); // сплитваме по този знак   ----  'Fergus: Wexamp, 30245'    => ['Fergus', 'Wexamp, 30245']
             let leader = tokens[0]; // първата част е лидера
             let splited = tokens[1].split(', '); // разделяме втората част 
@@ -27,12 +27,12 @@ function armies(arr) {
                 leaders[leader].push(army); // записваме дадената армия към него
                 leaders[leader].push(count); // и броя на войниците
             }
-        } else if (arr[i].includes("+")) {  // ако някой от елемнтите съдържа +
+        } else if (arr[i].includes("+")) {  // ако някой от елементите съдържа +
             let tokens = arr[i].split(' + '); // сплитваме по този знак   ----    'Wexamp + 6000'     =>     ['Wexamp', '6000']
             let army = tokens[0];  // първото е армията
             let count = tokens[1]; // второто е броя на хората
 
-            for (let value of Object.values(leaders)) { // минаваме през всички двойки - армия с брой войници в нея  ----- Porter: 58507
+            for (let value of Object.values(leaders)) { // минаваме през стойносста - армия с брой войници в нея  ----- Porter: 58507
                 if (value.includes(army)) { // ако армията търсена горе, съществува в обекта
                     value[value.indexOf(army) + 1] += Number(count); // добавя броя войници към вече наличния
                 }
@@ -48,7 +48,7 @@ function armies(arr) {
         value.unshift(total); // добавяме общия сбор в началото на масива
     }
     
-    let sortedTotal = Object.entries(leaders).sort(([keyA, valueA], [keyB, valueB]) => valueB[0] - valueA[0]); // сортираме
+    let sortedTotal = Object.entries(leaders).sort(([keyA, valueA], [keyB, valueB]) => valueB[0] - valueA[0]); // сортираме по тотал total
 
     for (let key of sortedTotal) { // минаваме през сортирания обект 
         let leaderName = key.shift(); // взимаме името на лидера, (Porter)
@@ -57,13 +57,13 @@ function armies(arr) {
 
 
         let curr = []; // създаваме нов масив
-        for (let i = 0; i < rest.length; i++) { //минаваме през всяка армия, която съдърва име и брой войници
+        for (let i = 0; i < rest.length; i++) { //минаваме през всяка армия, която съдържа име и брой войници
             let armyName = rest.shift(); // отделяме името - 'Legion'
             let armyCount = rest.shift(); // и броя войници - 55302
             curr.push([armyName, armyCount]); // слагаме само двете в новосъздадение масив
 
         }
-        let sorted = curr.sort((a, b) => b[1] - a[1]); // пак сортираме, но този път новия масив
+        let sorted = curr.sort((a, b) => b[1] - a[1]); // пак сортираме, но този път новия масив по азбучен ред
         console.log(`${leaderName}: ${totalArmy}`); 
         for (let el of sorted) { //минаваме през елемнетите в новия масив
             let armyName = el[0]; // записваме първия
