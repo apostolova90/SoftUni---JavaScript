@@ -1,5 +1,4 @@
 
-
 // Another
 
 // мой коментари
@@ -8,7 +7,7 @@ function bookShelf(arr) {
   let shelfs = {};
   let genres = [];
 
-  for (let i = 0; i < arr.length; i++) { // минаваме през всеки отделен елемнт в масива
+  for (let i = 0; i < arr.length; i++) { // минаваме през всеки отделен елемент в масива
 
     if (arr[i].includes("->")) { 
       let tokens = arr[i].split(" -> ");

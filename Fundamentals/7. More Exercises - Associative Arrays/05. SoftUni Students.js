@@ -12,12 +12,12 @@ function softUniStudents(arr) {
             let courseName = tokens[0];
             let capacity = tokens[1];
 
-            if (!places.includes(courseName)) {
-                courses[courseName] = {};
-                places.push(courseName);
-                places.push(Number(capacity));
+            if (!places.includes(courseName)) { // ако дадения курс го няма:
+                courses[courseName] = {}; // добавям като всеки курс като ключ и към него нов обекс ----- {{JavaBasics: {…}}} 
+                places.push(courseName); // добавям като всеки курс към масива places
+                places.push(Number(capacity)); // добавям като всяко капасити към масива places
             } else if (places.includes(courseName)) {
-                places[places.indexOf(courseName) + 1] += Number(capacity);
+                places[places.indexOf(courseName) + 1] += Number(capacity); // ако дадения курс го има, добавяме капаситито към съществуващото ве1е такова
             }
         
         } else if (arr[i].includes("@")){
@@ -71,7 +71,7 @@ softUniStudents([
     'user900[88] with email user900@user.com joins JSCore']);
     
     
-softUniStudents([
+/* softUniStudents([
     'JavaBasics: 15',
     'user1[26] with email user1@user.com joins JavaBasics',
     'user2[36] with email user11@user.com joins JavaBasics',
@@ -82,4 +82,4 @@ softUniStudents([
     'user3[6] with email user3@user.com joins C#Advanced',
     'C#Advanced: 1',
     'JSCore: 8',
-    'user23[62] with email user23@user.com joins JSCore'])
+    'user23[62] with email user23@user.com joins JSCore']) */

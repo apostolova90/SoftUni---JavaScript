@@ -4,17 +4,16 @@ function needForSpeed(arr) {
 
     let num = Number(arr.shift()); 
 
-    for (let i = 0; i < num; i++){ // завъртам рез първите n елемнета, за да им запиша данните в обекта:
+    for (let i = 0; i < num; i++){ // въртам през първите n елемнета, за да им запиша данните в обекта:
 
     let tokens = arr.shift().split("|")
         let car = tokens[0];
         let distance = Number(tokens[1])
         let fuel = Number(tokens[2])
-            allCars[car] = [];
-          
-          allCars[car].push(distance);
-            allCars[car].push(fuel);
-            console.log(allCars[car]);
+        
+        allCars[car] = [];
+        allCars[car].push(distance);
+        allCars[car].push(fuel);
     }
 
 
@@ -23,6 +22,7 @@ function needForSpeed(arr) {
         if (arr[i] === "Stop"){
             break;
         }
+    
         let tokens = arr[i].split(" : ");
         let command = tokens[0];
 
@@ -37,7 +37,7 @@ function needForSpeed(arr) {
 
        if (allCars[car][1] < fuel){ // правим проверка дали иамме достатъчно гориво
                 console.log("Not enough fuel to make that ride")
-            } else {
+            } else {f
                 allCars[car][0] += distance; // добавяме към общата дистанция
                 allCars[car][1] -= fuel; // вадим от наличния бензин
                 console.log(`${car} driven for ${distance} kilometers. ${fuel} liters of fuel consumed.`); // правим проверка за максималните километри

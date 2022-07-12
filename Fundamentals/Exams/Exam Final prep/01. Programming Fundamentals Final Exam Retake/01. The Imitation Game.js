@@ -1,7 +1,7 @@
 
 
 
-//АЗ
+//АЗ + споделена с колегите
 
 
 function theImitationGame(array) {

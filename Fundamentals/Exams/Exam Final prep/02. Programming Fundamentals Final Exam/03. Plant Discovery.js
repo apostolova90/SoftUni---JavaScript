@@ -6,7 +6,7 @@ function plantDiscovery(arr) {
 
     let plantColection = {};
 
-    let num = Number(arr.shift()); //
+    let num = Number(arr.shift()); //въртам през първите n елемнета, за да им запиша данните в обекта:
 
     for (let i = 0; i < num; i++){
 
@@ -20,6 +20,7 @@ function plantDiscovery(arr) {
         } else {
             plantColection[plant][0] = rarity;
         }
+    
     }
 
 
