@@ -19,7 +19,7 @@ function garage(array) {
     let entries = Object.entries(allGarages); // вадим двойките елементи от ключа - ключ и стойност
     console.log(entries);
     for (let line of entries) { // минаваме през всяка двойка елементи 
-        let garageNum = line.shift(); // отденяме номера на гаража
+        let garageNum = line.shift(); // отденяме номера на гаража  ------  '1' 
         console.log(`Garage № ${garageNum}`);// и го принтираме
         for (let carArr of line) { // минаваме през всеки от останалите елемент записан по line:
                                    // ['color - blue, fuel type - diesel'      ,    'color - red, manufacture - Audi']
