@@ -13,7 +13,7 @@ function aMinerTask(array){
         if (!production.has(current)){ // проверяваме дали в обекта го НЯМА този продукт
             production.set(current,0)// ако го няма, го добавяме заедно със стойността, която в случая е 0
         }
-        let updatedQuantity = production.get(current) // след взимаме сегашната стойност
+        let updatedQuantity = production.get(current) // след това взимаме сегашната стойност
         updatedQuantity+=quantity; // добавяме я към старата
         production.set(current, updatedQuantity) // и добавяме стойността към обекта
     }
