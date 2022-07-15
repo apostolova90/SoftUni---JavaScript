@@ -1,48 +1,77 @@
+
 //АЗ
 
+function worldTour(array) {
 
-/* function worldTour(array) {
+let stops = array.shift()
 
-    let workingArray = array.shift() //взимаме първата част върху която ще работим
-      
-    for (let line of array) {
-      //въртим през всеки елемент от масива
-      let lineInfo = line.split(":"); // и разделяме отделните части на елемента
-      let command = lineInfo[0]; // и записваме всяка една от тях под отделна променлива
-      let index = lineInfo[1];
-      let another = lineInfo[2];
-  
-      if (command === "Travel") {
+for (let i = 0; i < array.length; i++) {
+    
+    let tokens = array[i].split(":")
+    let command = tokens[0]
+
+    if (command === "Travel"){ // при получаваме команда за край
         break;
-      }
-  
-      switch (command) {
-        case "Add Stop": 
-        index = Number(index)
-            if (index > 0 && index < workingArray.length){
-                let first = workingArray.substring(0, index);
-                let second = workingArray.substring(index, workingArray.length);
-                workingArray = first + another + second;
-                console.log(workingArray);
-            }
-          break;
-
-        case "Remove Stop":
-          break;
-
-        case "Switch":
-          break;
-      }
     }
-      
+
+    if (command === "Add Stop"){ // добавяме 
+        let index = Number(tokens[1]);
+        let string = tokens[2]
+        if (index >= 0 & index < stops.length){ // проверяваме дали индекса съществува
+            let firstPart = stops.substring(0, index);
+            let secondPart = stops.substring(index, stops.length)
+            stops = firstPart + string + secondPart
+        }
+        console.log(stops)
+    }
+
+    if (command === "Remove Stop"){ // премахваме
+        let startIndex = Number(tokens[1]);
+        let endIndex = Number(tokens[2])
+        if (startIndex >= 0 & startIndex < stops.length){ // проверяваме дали първия индекс съществува
+            if (endIndex >= 0 & endIndex < stops.length){ // проверяваме дали втория индекс съществува
+            let firstPart = stops.substring(0, startIndex);
+            let secondPart = stops.substring(endIndex + 1, stops.length)
+            stops = firstPart + secondPart
+            // или с .replace:
+                /* let removed = stops.substring(startIndex, endIndex + 1);
+                stops = stops.replace(removed, ''); */
+            }
+        }
+        console.log(stops)
+    }
+    
+    if (command === "Switch"){ // разменяме
+        let oldString = tokens[1];
+        let newString = tokens[2]
+        if (stops.includes(oldString)){ // първо проверяваме дали съществува
+            stops = stops.replace(oldString, newString)
+        }
+        console.log(stops)
+    }
 }
-worldTour([
+
+console.log(`Ready for world tour! Planned stops: ${stops}`)
+
+}
+/* worldTour([
 "Hawai::Cyprys-Greece",
 "Add Stop:7:Rome",
 "Remove Stop:11:16",
 "Switch:Hawai:Bulgaria",
-"Travel"]); */
-                                                
+"Travel"]);  */
+
+worldTour([
+    'Albania:Bulgaria:Cyprus:Deuchland',
+    'Add Stop:3:Nigeria',
+    'Remove Stop:4:8',
+    'Switch:Albania: Azərbaycan',
+    'Travel'])
+
+
+
+
+
 
 
 
