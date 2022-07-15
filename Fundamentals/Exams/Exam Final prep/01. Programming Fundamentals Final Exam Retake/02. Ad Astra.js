@@ -1,4 +1,3 @@
-
 // друг
 
 /* function adAstra(arr) {

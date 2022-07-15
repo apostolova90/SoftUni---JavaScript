@@ -20,7 +20,6 @@ function plantDiscovery(arr) {
         } else {
             plantColection[plant][0] = rarity;
         }
-    
     }
 
 

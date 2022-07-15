@@ -41,7 +41,7 @@ for (let i = 0; i < arr.length; i++) { // след това започвамe д
         } else if (command === "Remove") {
             let piece = tokens[1]; // записваме първата променлива
             if (pieces.hasOwnProperty(piece)) { // проверяваме дали piese го има в глявния масив
-                delete pieces[piece]; //ако го има, го изтриваме 
+                delete pieces[piece]; //ако го има, го изтриваме (delete)
                 console.log(`Successfully removed ${piece}!`); // и принтираме:
             } else {
                 console.log(`Invalid operation! ${piece} does not exist in the collection.`); // ако го няма принтираме това:
@@ -52,7 +52,7 @@ for (let i = 0; i < arr.length; i++) { // след това започвамe д
             let piece = tokens[1]; // записваме първата променлива
             let newKey = tokens[2]; // записваме втората променлива
             if (pieces.hasOwnProperty(piece)) {  // проверяваме дали piese го има в глявния масив
-                pieces[piece][1] = newKey; //ако го има, го подменяме
+                pieces[piece][1] = newKey; //ако го има, го подменяме / change
                 console.log(`Changed the key of ${piece} to ${newKey}!`); // и принтираме:
             } else {
                 console.log(`Invalid operation! ${piece} does not exist in the collection.`); //ако го няма принтираме:
@@ -62,9 +62,13 @@ for (let i = 0; i < arr.length; i++) { // след това започвамe д
         }
     }
 
-    for (let key of Object.keys(pieces)) { // накрая минаваме през всички keys 
-        console.log(`${key} -> Composer: ${pieces[key][0]}, Key: ${pieces[key][1]}`); //и принтираме
+    for (let [key, value] of Object.entries(pieces)) { // накрая минаваме през всички entires (двойка ключ и стойност)
+        console.log(`${key} -> Composer: ${value[0]}, Key: ${value[1]}`); //и принтираме
     }
+// или така:
+    /* for (let key of Object.keys(pieces)) { // накрая минаваме през всички keys 
+        console.log(`${key} -> Composer: ${pieces[key][0]}, Key: ${pieces[key][1]}`); //и принтираме
+    } */
 }
 
 thePianist([
