@@ -1,7 +1,3 @@
-
-//ДРУГ
-
-
 function bombNumbers(arr, bombArr) {
     let bombNum = bombArr[0];
     let power = bombArr[1];

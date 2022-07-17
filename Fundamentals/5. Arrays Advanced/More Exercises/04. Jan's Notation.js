@@ -1,6 +1,3 @@
-
-/* ДРУГ */
-
 function jansNotation(arr) {
   let numArr = [];
   let isEnoughOperands = true;

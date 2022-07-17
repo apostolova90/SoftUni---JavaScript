@@ -1,6 +1,3 @@
-
-/* ДРУГ */
-
 function rosettaStone(arr) {
     let n = Number(arr.shift());
     let templateMatrix = [];

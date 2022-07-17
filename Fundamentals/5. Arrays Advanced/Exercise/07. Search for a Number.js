@@ -1,7 +1,3 @@
-
-/* ДРУГ
- */
-
 function searchForANumber(arr1, arr2) {
     countElementsToGetFromArr1 = arr2[0];
     countNumsToDeleteFromFirst = arr2[1];

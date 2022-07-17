@@ -1,8 +1,3 @@
-
-
-/* ДРУГ */
-
-
 function arrayManipulator(arr, arrStr) {
     let line = arrStr.shift();
  

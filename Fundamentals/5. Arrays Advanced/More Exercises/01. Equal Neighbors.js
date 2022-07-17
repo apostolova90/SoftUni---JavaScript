@@ -1,7 +1,3 @@
-
-
-/* ДРУГ */
-
 function equalNeighbor(matrix) {
   function columnNeighbors(matrix) {
     let numberOfNeighbors = 0;

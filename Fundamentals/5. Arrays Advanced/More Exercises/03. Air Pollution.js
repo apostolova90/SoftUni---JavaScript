@@ -1,6 +1,3 @@
-
-/* ДРУГ */
-
 function airPolution(mapAsArrOfStrings, commandsInArrOfStrings) {
   let mapAsArrOfArrs = [];
 

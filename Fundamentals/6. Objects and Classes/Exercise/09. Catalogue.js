@@ -1,6 +1,3 @@
-
-//ДРУГ
-
 function catalogue(input) {
     const catalogue = {};
   

@@ -1,7 +1,3 @@
-
-
-/* ДРУГ */
-
 function buildAWall(heightOfSectionsAsArr) {
     heightOfSectionsAsArr = heightOfSectionsAsArr.map(Number);
     let concreteUsedForEverySingleDayAsArr = [];

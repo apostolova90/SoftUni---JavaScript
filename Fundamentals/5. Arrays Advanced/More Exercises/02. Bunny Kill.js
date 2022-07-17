@@ -1,6 +1,3 @@
-
-/* ДРУГ */
-
 function bunnyKill(arr) {
   let coordinatesOfTheBombBunniesAsArr = arr
     .pop()

@@ -1,6 +1,3 @@
-/* 
-ДРУГ
- */
 function gladiatorInventory(input) {
         let myArray = input.join(',').split(',');
         let equipArray = myArray.shift().split(' ');

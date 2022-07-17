@@ -1,8 +1,3 @@
-
-
-/* ДРУГ */
-
-
 function sorting(array) {
     let result = [];
     let small = array.slice().sort((a, b) => a - b);

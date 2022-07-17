@@ -1,6 +1,3 @@
-
-//ДРУГ
-
 function sequences(arr) {
     let newArr = []; // the input arrays after parsing them
     for (let i = 0; i < arr.length; i++) {
