@@ -33,9 +33,9 @@ companyUsers([
     'Microsoft -> CC12345',
     'HP -> BB12345']);
 
-/* companyUsers([
+companyUsers([
     'SoftUni -> AA12345',
     'SoftUni -> CC12344',
     'Lenovo -> XX23456',
     'SoftUni -> AA12345',
-    'Movement -> DD11111']) */
+    'Movement -> DD11111'])

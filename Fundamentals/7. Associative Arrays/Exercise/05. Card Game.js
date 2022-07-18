@@ -69,7 +69,7 @@ cardGame([
 'Andrea: QH, QC, JS, JD, JC',
 'Peter: JD, JD, JD, JD, JD, JD']);
 
-/* cardGame([
+cardGame([
 'John: 2C, 4H, 9H, AS, QS',
 'Slav: 3H, 10S, JC, KD, 5S, 10S',
 'Alex: 6H, 7S, KC, KD, 5S, 10C',
@@ -78,4 +78,4 @@ cardGame([
 'Thomas: QH, QC, JS, JD, JC',
 'Alex: 6H, 7S, KC, KD, 5S, 10C',
 'Thomas: QH, QC, JS, JD, JC',
-'John: JD, JD, JD, JD']) */
+'John: JD, JD, JD, JD'])

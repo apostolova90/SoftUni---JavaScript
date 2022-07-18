@@ -71,7 +71,7 @@ softUniStudents([
     'user900[88] with email user900@user.com joins JSCore']);
     
     
-/* softUniStudents([
+softUniStudents([
     'JavaBasics: 15',
     'user1[26] with email user1@user.com joins JavaBasics',
     'user2[36] with email user11@user.com joins JavaBasics',
@@ -82,4 +82,4 @@ softUniStudents([
     'user3[6] with email user3@user.com joins C#Advanced',
     'C#Advanced: 1',
     'JSCore: 8',
-    'user23[62] with email user23@user.com joins JSCore']) */
+    'user23[62] with email user23@user.com joins JSCore'])

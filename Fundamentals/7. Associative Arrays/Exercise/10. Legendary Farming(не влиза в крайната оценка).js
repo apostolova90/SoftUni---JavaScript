@@ -1,8 +1,8 @@
 
 
-//ДРУГ 
+//Another 
 
-/* function legendaryFarming(string) {
+function legendaryFarming(string) {
 
     let stringArr = string.split(' ');
     let materials = {};
@@ -69,4 +69,4 @@
     }
 }
 
-legendaryFarming('3 Motes 5 stones 5 Shards 6 leathers 255 fragments 7 Shards') */
+legendaryFarming('3 Motes 5 stones 5 Shards 6 leathers 255 fragments 7 Shards')
