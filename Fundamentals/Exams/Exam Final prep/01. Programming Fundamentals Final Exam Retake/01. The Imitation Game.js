@@ -18,7 +18,7 @@ function theImitationGame(array){
       }
     }
 
-    if (command === "Insert"){ // добавяме даденп нещо след определено нещо в думата
+    if (command === "Insert"){  // добавяме дадено нещо на определено място в думата
       let index = Number(tokens[1]);
       let value = tokens[2];
       let firstPart = string.substring(0, index); // substring разделя стринга на две, като в случая започва от нулева позиция и продължава до дадения индекс
@@ -39,7 +39,7 @@ function theImitationGame(array){
 
 }
 theImitationGame(["zzHe", "ChangeAll|z|l", "Insert|2|o", "Move|3", "Decode"]);
-/* theImitationGame(["owyouh","Move|2","Move|3","Insert|3|are","Insert|9|?","Decode"]); */
+theImitationGame(["owyouh","Move|2","Move|3","Insert|3|are","Insert|9|?","Decode"]);
 
 
 
