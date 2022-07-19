@@ -80,7 +80,7 @@ function needForSpeed(arr) {
 
 
 }
-/* needForSpeed([
+needForSpeed([
 '3',
 'Audi A6|38000|62',
 'Mercedes CLS|11000|35',
@@ -91,7 +91,7 @@ function needForSpeed(arr) {
 'Refuel : Audi A6 : 50',
 'Revert : Mercedes CLS : 500',
 'Revert : Audi A6 : 30000',
-'Stop']); */
+'Stop']);
 
 needForSpeed([
 '4',
