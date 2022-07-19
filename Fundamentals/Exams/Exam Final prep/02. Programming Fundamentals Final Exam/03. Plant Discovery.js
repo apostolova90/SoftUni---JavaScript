@@ -39,8 +39,9 @@ function plantDiscovery(arr) {
             if (!plantColection.hasOwnProperty(plant)) { // проверяваме дали растението го НЯМА в глявния масив
                 console.log("error"); //ако го няма, принтираме това
             } else {
-                plantColection[plant].push(rating); // ако го ИМА добавяме рейтинга в главния обект ------- от това [7], става това - [7, 10]
-                }
+                plantColection[plant].push(rating); // ако го ИМА добавяме И рейтинга в главния обект ---- така под ключа ще има вече две стоности (rarety и rating)
+            }           // на следващото завъртане през командите, ако пак имаме Rate за същото растение, ще добави и новия rating към стария (от 5, ще стане 5,10)
+
 
         } else if (command === "Update"){
             let plant = splitted[0];
@@ -69,7 +70,7 @@ function plantDiscovery(arr) {
         let totalRating = 0;
         let count = 0;
 
-        for (let i = 1; i < plantColection[key].length; i++) { // минаваме през всеки елемент в настойността към все ключ
+        for (let i = 1; i < plantColection[key].length; i++) { // минаваме през всеки елемент в стойността към все ключ, като започваме от 1 (i = 1), защото на 0ва позиция се намира rarety- тo, което има само ч яисло за стойност и и не ни интересува
                                                                // [4]
                                                                // [5, 10, 5]
                                                                // [2, 7]
