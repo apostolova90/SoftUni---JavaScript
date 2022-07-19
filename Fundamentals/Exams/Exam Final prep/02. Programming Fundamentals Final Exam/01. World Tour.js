@@ -17,7 +17,7 @@ for (let i = 0; i < array.length; i++) {
     if (command === "Add Stop"){ // добавяме 
         let index = Number(tokens[1]);
         let string = tokens[2]
-        if (index >= 0 & index < stops.length){ // проверяваме дали индекса съществува
+        if (index >= 0 && index < stops.length){ // проверяваме дали индекса съществува
             let firstPart = stops.substring(0, index);
             let secondPart = stops.substring(index, stops.length)
             stops = firstPart + string + secondPart
@@ -28,8 +28,8 @@ for (let i = 0; i < array.length; i++) {
     if (command === "Remove Stop"){ // премахваме
         let startIndex = Number(tokens[1]);
         let endIndex = Number(tokens[2])
-        if (startIndex >= 0 & startIndex < stops.length){ // проверяваме дали първия индекс съществува
-            if (endIndex >= 0 & endIndex < stops.length){ // проверяваме дали втория индекс съществува
+        if (startIndex >= 0 && startIndex < stops.length){ // проверяваме дали първия индекс съществува
+            if (endIndex >= 0 && endIndex < stops.length){ // проверяваме дали втория индекс съществува
             let firstPart = stops.substring(0, startIndex);
             let secondPart = stops.substring(endIndex + 1, stops.length)
             stops = firstPart + secondPart
@@ -54,12 +54,12 @@ for (let i = 0; i < array.length; i++) {
 console.log(`Ready for world tour! Planned stops: ${stops}`)
 
 }
-/* worldTour([
+worldTour([
 "Hawai::Cyprys-Greece",
 "Add Stop:7:Rome",
 "Remove Stop:11:16",
 "Switch:Hawai:Bulgaria",
-"Travel"]);  */
+"Travel"]); 
 
 worldTour([
     'Albania:Bulgaria:Cyprus:Deuchland',
