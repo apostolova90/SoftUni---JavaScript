@@ -1,6 +1,6 @@
 function extractEmails(input){
 
-    let regex = /(?<!\S)[a-zA-Z]+([\.\-\_]*[A-Za-z]+)*@[a-zA-Z]+([\.\-]*[A-Za-z]+)*(\.[A-Za-z]+)/g
+    let regex = /(?<!\S)[a-zA-Z0-9]+([\.\-\_]*[A-Za-z0-9]+)*@[a-zA-Z]+([\.\-]*[A-Za-z0-9]+)*(\.[A-Za-z0-9]+)/g
     let result = input.match(regex)
 
     for (let line of result){
