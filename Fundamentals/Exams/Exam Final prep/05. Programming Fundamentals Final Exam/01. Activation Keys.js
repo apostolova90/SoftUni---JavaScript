@@ -1,8 +1,8 @@
 
-// друг
+// Another
 
 
-function activationKeys(arr) {
+/* function activationKeys(arr) {
 
     let key = arr.shift();
 
@@ -51,7 +51,7 @@ activationKeys(["abcdefghijklmnopqrstuvwxyz",
     "Flip>>>Lower>>>5>>>7",
     "Contains>>>def",
     "Contains>>>deF",
-    "Generate"])
+    "Generate"]) */
 
 
 
