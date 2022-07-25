@@ -1,7 +1,7 @@
 function theImitationGame(array){
 
   let string = array.shift();   //взимаме първата част върху която ще работим
-
+  
   for (let i = 0; i < array.length; i++){ //въртим през всеки елемент от масива
     let tokens = array[i].split("|") // и разделяме отделните части на елемента
     let command = tokens[0]; // и записваме всяки един от тях под отделна променлива

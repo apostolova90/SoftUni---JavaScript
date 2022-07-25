@@ -62,6 +62,8 @@ winningTicket(`сс@@@@@@@@@@@@dddddf`)
 
 //Another
 
+100/100
+
 //function winningTicket(str) {
 //    const VALID_TICKET_LENGTH = 20;
 //    const tickets = str.trim().split(/\s*,\s*/);

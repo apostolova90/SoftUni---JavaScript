@@ -1,4 +1,58 @@
 
+
+// АЗ
+
+function mirrorWords(data) {
+
+    let regex = /([@|#])(?<firstword>[A-Za-z]{3,})\1{2}(?<secondWord>[A-Za-z]{3,})\1/g //{2} е задължително след \1, защото думите започват и завършват с един от двата знака (@, #) и ако не сложим {2}  няма да хванем случайте, когато знака присъства 2 пъти един след друг
+    let firstWord = ""
+    let secongWord = ""
+
+    let mirrorWords = []
+    let count = 0; 
+
+    let match = regex.exec(data)
+
+
+    while (match !== null){
+                count++
+        let firstWord = match.groups['firstword'];
+        let secongWord = match.groups['secondWord'];
+
+
+        let reversedSecondWords = secongWord.split('').reverse().join('');
+        if (firstWord === reversedSecondWords){
+            mirrorWords.push(` ${firstWord} <=> ${secongWord}`)
+        } 
+
+        match = regex.exec(data)
+}
+
+    if (count <= 0){
+        console.log("No word pairs found!")
+    } else {
+        console.log(`${count} word pairs found!`)
+    }
+
+    if (mirrorWords <= 0){
+        console.log("No mirror words!")
+    } else {
+        console.log(`The mirror words are:`)
+        console.log(`${mirrorWords}`)
+    }
+}
+mirrorWords(['@mix#tix3dj#poOl##loOp#wl@@bong&song%4very$long@thong#Part##traP##@@leveL@@Level@##car#rac##tu@pack@@ckap@#rr#sAw##wAs#r#@w1r'])
+mirrorWords([`#po0l##l0op# @bAc##cAB@ @LM@ML@ #xxxXxx##xxxXxx# @aba@@ababa@`])
+mirrorWords([`#lol#lol# @#God@@doG@# #abC@@Cba# @Xyu@#uyX#`])
+
+
+
+
+
+
+
+
+
 // друг
 
 
