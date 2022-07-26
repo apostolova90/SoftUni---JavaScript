@@ -1,4 +1,84 @@
 
+// АЗ
+
+function activationKeys(arr) {
+ 
+let string = arr.shift();
+
+for (let i = 0; i < arr.length; i++) {
+    let tokens = arr[i].split(">>>");
+    let command = tokens[0];
+
+    if (command === "Generate"){
+        break;
+    }
+
+    if (command === "Slice"){
+        let index1 = Number(tokens[1])
+        let index2 = Number(tokens[2])
+        let firstPart = string.substring(0, index1);
+        let secondPart = string.substring(index2, string.length);
+        string = firstPart + secondPart
+        console.log(string)
+    }
+
+    if (command === "Flip"){
+        let upprerOrLower = tokens[1]
+        let index1 = Number(tokens[2])
+        let index2 = Number(tokens[3])
+
+        let firstPart = string.substring(0, index1)
+        let secondPart = string.substring(index1, index2)
+        let thirdPart = string.substring(index2, string.length)
+            if (upprerOrLower === "Upper"){
+                secondPart = secondPart.toUpperCase();
+            } else {
+                secondPart = secondPart.toLowerCase();
+            }
+        string = firstPart + secondPart + thirdPart
+        console.log(string)
+    }
+
+    if (command === "Contains"){
+        let substring = tokens[1];
+        if (string.includes(substring)){
+            console.log(`${string} contains ${substring}`)
+        } else {
+            console.log("Substring not found!")
+        }
+    }
+}
+
+console.log(`Your activation key is: ${string}`)
+   
+}
+activationKeys([
+"abcdefghijklmnopqrstuvwxyz",
+"Slice>>>2>>>6",
+"Flip>>>Upper>>>3>>>14",
+"Flip>>>Lower>>>5>>>7",
+"Contains>>>def",
+"Contains>>>deF",
+"Generate"])
+
+console.log("________________")
+
+activationKeys(([
+"134softsf5ftuni2020rockz42",
+"Slice>>>3>>>7",
+"Contains>>>-rock",
+"Contains>>>-uni-",
+"Contains>>>-rocks",
+"Flip>>>Upper>>>2>>>8",
+"Flip>>>Lower>>>5>>>11",
+"Generate"])
+)
+
+
+
+
+
+
 // Another
 
 
@@ -52,6 +132,7 @@ activationKeys(["abcdefghijklmnopqrstuvwxyz",
     "Contains>>>def",
     "Contains>>>deF",
     "Generate"]) */
+
 
 
 
