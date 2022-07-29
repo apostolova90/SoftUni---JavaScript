@@ -30,7 +30,7 @@ function needForSpeed(arr) {
             let fuel = Number(tokens[3]); // записваме третата променлива
 
 //    allCars[car][0]      ----   общата дистанция кояро е мината от колата
-//    allCars[car][1]      ----   горивото, което има автомобила
+//    allCars[car][1]      ----   горивото, което има автомобилът
  
 
        if (allCars[car][1] < fuel){ // правим проверка дали иамме достатъчно гориво
@@ -79,7 +79,7 @@ function needForSpeed(arr) {
 
 
 }
-/* needForSpeed([
+needForSpeed([
 '3',
 'Audi A6|38000|62',
 'Mercedes CLS|11000|35',
@@ -90,7 +90,7 @@ function needForSpeed(arr) {
 'Refuel : Audi A6 : 50',
 'Revert : Mercedes CLS : 500',
 'Revert : Audi A6 : 30000',
-'Stop']); */
+'Stop']);
 
 needForSpeed([
 '4',
@@ -103,8 +103,7 @@ needForSpeed([
 'Drive : Aston Martin Valkryie : 2 : 1',
 'Refuel : Lamborghini Veneno : 40',
 'Revert : Bugatti Veyron : 2000',
-'Stop'
-])
+'Stop'])
 
 
 
