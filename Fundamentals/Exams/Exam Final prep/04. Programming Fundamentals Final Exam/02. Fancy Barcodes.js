@@ -11,7 +11,8 @@ for (let i = 0; i < number; i++){  // завъртаме през дадения
     let numbers = []
     let match = regex.exec(input[i]) // проверяваме дали отделните стрингове, отговарят на заданените в regex-a параметри
 // match = (2) ['@###Val1d1teM@###', 'Val1d1teM', index: 0, input: '@###Val1d1teM@###', groups: {…}]
-    if (!match) { 
+
+    if (!match) {  // АКО REGEX-a НЕ РАБОТИ
         console.log(`Invalid barcode`)
     }
 
