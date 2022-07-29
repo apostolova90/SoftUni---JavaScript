@@ -45,7 +45,6 @@ let password  = array.shift()
                 } 
                 console.log(password)
             }   
-
         }
     }
     console.log(`Your password is: ${password}`)

@@ -17,7 +17,7 @@ for (let i = 0; i < number; i++){  // завъртаме през дадения
     }
 
     while (match !== null){ // ако проверката връща различно от null
-        let food = match.groups['pass']; // създаваме нова променлива, в която записваме всеки отговарящ елемнт
+        let food = match.groups['pass']; // създаваме нова променлива, в която записваме всеки отговарящ елемeнт - 'FreshFisH'......
 
         for (let char of food) {
             if ((char.charCodeAt(0) >= 48) && (char.charCodeAt(0) <= 57)) { // по този начин проверяваме дали char-a е число или буква
