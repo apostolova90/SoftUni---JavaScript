@@ -15,6 +15,7 @@ function theImitationGame(array){
       let replacement = tokens[2];
       while (string.includes(substring)){ // задължително с WHILE, за да мине през всички букви, ав слуяай че някоя се повтаря повече от 1 път
         string = string.replace(substring, replacement)
+        // string = string.split(substring).join(replacement) // или така, което си е абсолютно същото!
       }
     }
 

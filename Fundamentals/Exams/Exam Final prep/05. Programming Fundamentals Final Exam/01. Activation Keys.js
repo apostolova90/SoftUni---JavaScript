@@ -77,6 +77,86 @@ activationKeys(([
 
 
 
+// АЗ
+
+/* function activationKeys(arr) {
+
+    let text = arr.shift();
+
+    for (let i = 0; i < arr.length; i++) {
+        let tokens = arr[i].split(">>>")
+        let command = tokens[0]
+        if (command === "Generate"){
+            break;
+        }
+
+        if (command === "Slice"){
+            let startIndex = Number(tokens[1]);
+            let endIndex = Number(tokens[2]);
+            let firstPart = text.substring(0, startIndex)
+            let secondPart = text.substring(endIndex, text.length)
+            text = firstPart + secondPart
+            console.log(text);
+        }
+
+        if (command === "Contains"){
+            let substring = tokens[1];
+            if (text.includes(substring)){
+                console.log(`${text} contains ${substring}`)
+            } else {
+                console.log("Substring not found!")
+            }
+        }
+
+        if (command === "Flip"){
+            let upperOrLowwer = tokens[1];
+            let startIndex = Number(tokens[2]);
+            let endIndex = Number(tokens[3]);
+
+            let firstPart = text.substring(0, startIndex);
+            let secondPart = text.substring(startIndex, endIndex)
+            let thirdPart = text.substring(endIndex, text.length);
+
+            if (upperOrLowwer === "Upper"){
+                secondPart = secondPart.toUpperCase();
+            } else {
+                secondPart = secondPart.toLowerCase();
+            }
+            text = firstPart + secondPart + thirdPart;
+            console.log(text)
+        }
+    }
+console.log(`Your activation key is: ${text}`);
+
+}
+activationKeys([
+"abcdefghijklmnopqrstuvwxyz",
+"Slice>>>2>>>6",
+"Flip>>>Upper>>>3>>>14",
+"Flip>>>Lower>>>5>>>7",
+"Contains>>>def",
+"Contains>>>deF",
+"Generate"])
+
+console.log("________________")
+
+activationKeys(([
+"134softsf5ftuni2020rockz42",
+"Slice>>>3>>>7",
+"Contains>>>-rock",
+"Contains>>>-uni-",
+"Contains>>>-rocks",
+"Flip>>>Upper>>>2>>>8",
+"Flip>>>Lower>>>5>>>11",
+"Generate"])
+) */
+
+
+
+
+
+
+
 
 
 // Another
