@@ -3,9 +3,53 @@
 
 function emojiDetector(input) {
 
+let text = input.shift()  // първо правя масива на стринг, за да миан после през него
+
+let regexNumbers = /[0-9]{1}/g  // един regex, който да открие числата
+let regexWords = /(\:{2}|\*{2})(?<emojies>[A-Z][a-z]{2,})\1/g // един regex, който да открие буквите
+            
+let allCoolEmojies = []
+
+let allNumbers = text.match(regexNumbers) // откриваме всички числа в текста --- ['3', '1', '1', '3', '1', '1', '2', '3', '5', '2', '1']
+let totalCoolThreshold = 1; 
+for (let i = 0; i < allNumbers.length; i++) {
+    totalCoolThreshold *= Number(allNumbers[i]) // пресмятаме cool threshold-a като умножаваме полученото число със следващото
+}
+
+
+let matchEmojies = regexWords.exec(text) // откриваме всички emojies в текста ---  ['::Smiley::', '::', 'Smiley', index: 49, input: 'In the Sofia Zoo there are 311 animals in tot…ent types of :Snak::Es::. ::Mooning:: **Shy**', groups: {…}]
+let count = 0;
+
+while (matchEmojies !== null){ // въртим докато спрем да открива matches
+    count++ // бройм всяко открито emoji
+    let currentEmoji = matchEmojies.groups['emojies'].split(""); // взимаме всяко открито emojie и го сплитваме за да стане масив --- 'Smiley' => ['S', 'm', 'i', 'l', 'e', 'y']
+    let currentEmojiCoolness = 0; 
+    for (let i = 0; i < currentEmoji.length; i++){
+        currentEmojiCoolness += currentEmoji[i].charCodeAt(0) // смятаме coolness-a на всяко emoji
+    }
+
+    if (currentEmojiCoolness >= totalCoolThreshold){ // проверяваме дали cool-неса на emoji-то е по-голям от тотала
+        allCoolEmojies.push(matchEmojies[0]) // и ако е домавяме emoji-то в масив, за да наредим всички на едно място
+    } // matchEmojies[0]  взима първия елемнт в matchEmojies:  ['::Smiley::', '::', 'Smiley', index: 49, input: 'In the Sofia Zoo there are 311 animals in tot…ent types of :Snak::Es::. ::Mooning:: **Shy**', groups: {…}]       
+
+    matchEmojies = regexWords.exec(text)
+}
+console.log(`Cool threshold: ${totalCoolThreshold}`)
+console.log(`${count} emojis found in the text. The cool ones are:`)
+    for (let i = 0; i < allCoolEmojies.length; i++) { // минавам през всички emojies записани в allCoolEmojies, и ги принтирам 
+        console.log(allCoolEmojies[i])
+    }
 
 }  
 emojiDetector(["In the Sofia Zoo there are 311 animals in total! ::Smiley:: This includes 3 **Tigers**, 1 ::Elephant:, 12 **Monk3ys**, a **Gorilla::, 5 ::fox:es: and 21 different types of :Snak::Es::. ::Mooning:: **Shy**"])
+console.log("___________")
+emojiDetector((["5, 4, 3, 2, 1, go! The 1-th consecutive banana-eating contest has begun! ::Joy:: **Banana** ::Wink:: **Vali** ::valid_emoji::"]))
+
+
+
+
+
+
 
 
 
