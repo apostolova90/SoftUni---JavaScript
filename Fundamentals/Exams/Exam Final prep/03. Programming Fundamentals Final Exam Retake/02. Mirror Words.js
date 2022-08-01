@@ -19,7 +19,6 @@ function mirrorWords(data) {
         let firstWord = match.groups['firstword'];
         let secongWord = match.groups['secondWord'];
 
-
         let reversedSecondWords = secongWord.split('').reverse().join('');
         if (firstWord === reversedSecondWords){
             mirrorWords.push(` ${firstWord} <=> ${secongWord}`)
