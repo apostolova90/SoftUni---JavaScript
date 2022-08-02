@@ -1,4 +1,80 @@
+
+//АЗ 
+
 function passwordReset(array) {
+
+    let password = array.shift();
+
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] === "Done") { // при получаваме команда за край
+            break;
+            break;
+        }
+        let tokens = array[i].split(" ")
+        let command = tokens[0];
+
+        if (command === "TakeOdd") {
+            let newString = "";
+            for (let i = 0; i < password.length; i++) {
+                if (i % 2 !== 0){
+                    newString += password[i]
+                }
+            }
+            password = newString
+            console.log(password)
+        }
+
+        if (command === "Cut") {
+            let index = Number(tokens[1]);
+            let length = Number(tokens[2]);
+            let endIndex = index + length; // събираме двете, за да получим индекса, от който трябва да започнем да отделяме втората част а стринга
+            // целта е да вземем двете части около стринга, който трябва да махнем, за д аможем после да ги съберем
+        let firstPart = password.substring(0, index);
+        let secondPart = password.substring(endIndex, password.length)
+        password = firstPart + secondPart 
+        console.log(password)
+        }
+        
+        if (command === "Substitute") {
+            let substring = tokens[1];
+            let substitute = tokens[2];
+
+            if (!password.includes(substring)){
+                console.log("Nothing to replace!");
+            } else {
+                while (password.includes(substring)) { // задължително с WHILE, за да мине през всички букви, ав слуяай че някоя се повтаря повече от 1 път
+                    password = password.replace(substring, substitute)
+                }
+                console.log(password)
+            }
+        }
+    }
+    console.log(`Your password is: ${password}`)
+    
+}
+passwordReset([
+"Siiceercaroetavm!:?:ahsott.:i:nstupmomceqr",
+"TakeOdd",
+"Cut 15 3",
+"Substitute :: -",
+"Substitute | ^",
+"Done"]);
+   
+console.log('------------------------')
+
+passwordReset([
+"up8rgoyg3r1atmlmpiunagt!-irs7!1fgulnnnqy",
+"TakeOdd",
+"Cut 18 2",
+"Substitute ! ***",
+"Substitute ? .!.",
+"Done"]); 
+
+
+
+
+
+/* function passwordReset(array) {
 
 
 let password  = array.shift()
@@ -65,7 +141,10 @@ passwordReset([
 "Cut 18 2",
 "Substitute ! ***",
 "Substitute ? .!.",
-"Done"]); 
+"Done"]);  */
+
+
+
 
 
 // Радо (колега)
@@ -128,6 +207,7 @@ passwordReset([
     "Done"]); */
 
 
+    
 
 
 // Another

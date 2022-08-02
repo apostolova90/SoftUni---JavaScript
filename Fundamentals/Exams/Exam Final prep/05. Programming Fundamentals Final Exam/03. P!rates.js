@@ -74,6 +74,7 @@ function pirates(arr) {
         console.log("Ahoy, Captain! All targets have been plundered and destroyed!")
     }
 
+
 }
 pirates([
     "Tortuga||345000||1250",
