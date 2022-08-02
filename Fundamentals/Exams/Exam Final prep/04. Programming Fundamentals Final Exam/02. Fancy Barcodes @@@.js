@@ -55,6 +55,61 @@ fancyBarcodes([
 
 
 
+//АЗ
+ 
+/* function fancyBarcodes(input) {
+
+let regex = /(@{1}#+)(?<barcode>[A-Z][A-Za-z0-9]{4,}[A-Z])(@{1}#+)/g
+
+    let num = Number(input.shift());
+    let numbers = "";
+
+    for (let i = 0; i < num; i++) {
+        let match = regex.exec(input[i])
+
+        if (!match){
+            console.log("Invalid barcode")
+        }
+
+        while (match !== null){
+            let barcode = match.groups['barcode'];
+            for (let j = 0; j < barcode.length; j++) {
+                let char = barcode[j];
+                if ((char.charCodeAt(0) >= 48) && (char.charCodeAt(0) <= 57)){
+                    numbers += char
+                }
+            }
+            if (numbers.length <= 0){
+                console.log('Product group: 00')
+            } else {
+                console.log(`Product group: ${numbers}`)
+            }
+            match = regex.exec(input[i])
+        }
+        numbers = ""
+    }
+}
+fancyBarcodes([
+"3",
+"@#FreshFisH@#",
+"@###Brea0D@###",
+"@##Che4s6E@##"]);
+
+console.log('---');
+
+fancyBarcodes([
+"6",
+"@###Val1d1teM@###",
+"@#ValidIteM@#",
+"##InvaliDiteM##",
+"@InvalidIteM@",
+"@#Invalid_IteM@#",
+"@#ValiditeM@#"]); */
+
+
+
+
+
 
 // Another
 
