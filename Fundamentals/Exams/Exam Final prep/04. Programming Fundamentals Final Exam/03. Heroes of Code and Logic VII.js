@@ -1,6 +1,5 @@
 // АЗ
 
-
 function heroesOfCodeAndLogic(arr) {
 
 let allHeroes = {}
@@ -84,10 +83,7 @@ for (let i = 0; i < num; i++) {     //въртам през първите n е�
         console.log(`${key}`);   
         console.log(`HP: ${allHeroes[key][0]}`)
         console.log(`MP: ${allHeroes[key][1]}`)
-}
-
-
-
+    }
 }
 heroesOfCodeAndLogic([
     '2',
@@ -112,3 +108,124 @@ heroesOfCodeAndLogic([
     'TakeDamage - Ivor - 3 - Mosquito',
     'End'])
 
+
+
+
+
+
+
+
+
+
+
+
+
+// АЗ
+
+/* function heroesOfCodeAndLogic(arr) {
+
+    let allHeroes = {};
+
+    let num = Number(arr.shift());
+
+    for (let i = 0; i < num; i++) {
+        let tokens = arr.shift().split(" ")
+        let name = tokens[0];
+        let hitPoints = Number(tokens[1])
+        let manaPoints = Number(tokens[2])
+            allHeroes[name] = []
+            allHeroes[name].push(hitPoints)
+            allHeroes[name].push(manaPoints)
+    }
+
+    for (let i = 0; i < arr.length; i++) {
+        let tokens = arr[i].split(" - ")
+        let command = tokens[0];
+        let name = tokens[1];
+
+        if (command === "End"){
+            break;
+        }
+
+        if (command === "Heal"){
+            let amount = Number(tokens[2])
+            let diff = 100 - allHeroes[name][0]
+            allHeroes[name][0] += amount;
+            if (allHeroes[name][0] > 100){
+                console.log(`${name} healed for ${diff} HP!`)
+                allHeroes[name][0] = 100
+            } else {
+                console.log(`${name} healed for ${amount} HP!`)
+            }
+        }
+
+        if (command === "Recharge"){
+            let amount = Number(tokens[2])
+            let diff = 200 - allHeroes[name][1]
+            allHeroes[name][1] += amount;
+            if (allHeroes[name][1] > 200){
+                console.log(`${name} recharged for ${diff} MP!`)
+                allHeroes[name][1] = 200
+            } else {
+                console.log(`${name} recharged for ${amount} MP!`)
+            }
+        }
+
+        if (command === "TakeDamage"){
+            let damage = Number(tokens[2])
+            let attacker = tokens[3]
+            allHeroes[name][0] -= damage;
+            if (allHeroes[name][0] > 0){
+                console.log(`${name} was hit for ${damage} HP by ${attacker} and now has ${allHeroes[name][0]} HP left!`)
+            } else {
+                delete allHeroes[name];
+                console.log(`${name} has been killed by ${attacker}!`)
+            
+            }
+        }
+
+        if (command === "CastSpell"){
+            let MPNeeded = Number(tokens[2])
+            let spellName = tokens[3]
+            if (allHeroes[name][1] >= MPNeeded){
+                allHeroes[name][1] -= MPNeeded
+                console.log(`${name} has successfully cast ${spellName} and now has ${allHeroes[name][1]} MP!`)
+            } else {
+                console.log(`${name} does not have enough MP to cast ${spellName}!`)
+            }
+        }
+    }
+
+    for (let key of Object.keys(allHeroes)) {
+        let name = key;
+        let hitPoints = allHeroes[key][0];
+        let manaPoints = allHeroes[key][1];
+        console.log(`${name}`)
+        console.log(`HP: ${hitPoints}`)
+        console.log(`MP: ${manaPoints}`)
+    }
+}
+heroesOfCodeAndLogic([
+    '2',
+    'Solmyr 85 120',
+    'Kyrre 99 50',
+    'Heal - Solmyr - 10',
+    'Recharge - Solmyr - 50',
+    'TakeDamage - Kyrre - 66 - Orc',
+    'CastSpell - Kyrre - 15 - ViewEarth',
+    'End']); 
+
+    console.log("___________")
+
+heroesOfCodeAndLogic([
+    '4',
+    'Adela 90 150',
+    'SirMullich 70 40',
+    'Ivor 1 111',
+    'Tyris 94 61',
+    'Heal - SirMullich - 50',
+    'Recharge - Adela - 100',
+    'CastSpell - Tyris - 1000 - Fireball',
+    'TakeDamage - Tyris - 99 - Fireball',
+    'TakeDamage - Ivor - 3 - Mosquito',
+    'End']) */
