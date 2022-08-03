@@ -64,3 +64,77 @@ secretChat([
     'InsertSpace:|:3',
     'InsertSpace:|:7',
     'Reveal'])
+
+
+
+
+
+
+
+
+
+// АЗ
+
+/* function secretChat(array){
+
+  let message = array.shift();
+
+  for (let i = 0; i < array.length; i++){
+    if (array[i] === "Reveal"){
+      break;
+    }
+
+    let tokens = array[i].split(":|:");
+    let command = tokens[0];
+
+    if (command === "ChangeAll"){
+      let substring = tokens[1];
+      let replacement = tokens[2];
+      while (message.includes(substring)){
+        message = message.replace(substring, replacement);
+      }
+      console.log(message);
+    }
+    
+    if (command === "Reverse"){
+      let substring = tokens[1];
+      if (message.includes(substring)){
+        let firstIndex = message.indexOf(substring); // намираме старт индекса - от който започва в текста
+        let lastIndex = firstIndex + substring.length; // намираме end индекса - на който завършва
+        let firstPart = message.substring(0, firstIndex); // оделяме първата част 
+        let secondPart = message.substring(lastIndex, message.length); // отделяме втората част 
+        let reversed = substring.split('').reverse().join('');
+        message = firstPart + secondPart + reversed;
+        console.log(message);
+      } else {
+        console.log("error");
+      }
+    }
+
+    if (command === "InsertSpace"){
+      let index = Number(tokens[1]);
+      let firstPart = message.substring(0, index);
+      let secondPart = message.substring(index, message.length);
+      message = firstPart + " " + secondPart;
+      console.log(message);
+    }
+  }
+  console.log(`You have a new text message: ${message}`);
+}
+secretChat([
+  'heVVodar!gniV',
+  'ChangeAll:|:V:|:l',
+  'Reverse:|:!gnil',
+  'InsertSpace:|:5',
+  'Reveal'])
+  
+console.log("________________")
+
+secretChat([
+  'Hiware?uiy',
+  'ChangeAll:|:i:|:o',
+  'Reverse:|:?uoy',
+  'Reverse:|:jd',
+  'InsertSpace:|:3',
+  'InsertSpace:|:7',
+  'Reveal']) */
