@@ -1,3 +1,6 @@
+
+// АЗ
+
 function needForSpeed(arr) {
     
     let allCars = {}
@@ -103,14 +106,126 @@ needForSpeed([
 'Drive : Aston Martin Valkryie : 2 : 1',
 'Refuel : Lamborghini Veneno : 40',
 'Revert : Bugatti Veyron : 2000',
-'Stop'])
+'Stop']) 
+
+
+
+
+
+
+
+
+// АЗ
+
+/* function needForSpeed(arr) {
+
+    let allCars = {};
+    let num = Number(arr.shift());
+
+    for (let i = 0; i < num; i++) {
+        let tokens = arr.shift().split("|");
+        let car = tokens[0];
+        let mileage = Number(tokens[1]);
+        let fuel = Number(tokens[2]);
+        allCars[car] = [] // създаваме нов масив вътре в обекта, в който наливаме като стойности mileage и fuel
+        allCars[car].push(mileage);
+        allCars[car].push(fuel);
+    }
+
+    for (let j = 0; j < arr.length; j++) {
+        let tokens = arr[j].split(" : ");
+        let command = tokens[0];
+
+        if (command === "Stop"){
+            break;
+        }
+
+        if (command === "Drive"){
+            let car = tokens[1]
+            let distance = Number(tokens[2]);
+            let fuel = Number(tokens[3]);
+
+            if (allCars[car][1] >= fuel){
+                allCars[car][0] += distance
+                allCars[car][1] -= fuel
+                console.log(`${car} driven for ${distance} kilometers. ${fuel} liters of fuel consumed.`)
+            } else {
+                console.log("Not enough fuel to make that ride")
+            }
+            
+            if (allCars[car][0] >= 100000){
+                delete allCars[car];
+                console.log(`Time to sell the ${car}!`);
+            }
+        }
+
+        if (command === "Refuel"){
+            let car = tokens[1]
+            let fuel = Number(tokens[2]);
+            let diff = 75 - allCars[car][1];
+            allCars[car][1] += fuel;
+            if (allCars[car][1] > 75){
+                allCars[car][1] = 75;
+                console.log(`${car} refueled with ${diff} liters`)
+            } else {
+                console.log(`${car} refueled with ${fuel} liters`)
+            }
+        }
+
+        if (command === "Revert"){
+            let car = tokens[1]
+            let kilometers = Number(tokens[2]);
+            allCars[car][0] -= kilometers;
+            if (allCars[car][0] < 10000){
+                allCars[car][0] = 10000
+            } else {
+                console.log(`${car} mileage decreased by ${kilometers} kilometers`)
+            }
+        }
+    }
+
+    for (let key of Object.keys(allCars)) { // после завъртаме през всички герой в главния обект, за да принтираме:
+        console.log(`${key} -> Mileage: ${allCars[key][0]} kms, Fuel in the tank: ${allCars[key][1]} lt.`)
+    }
+
+}
+needForSpeed([
+'3',
+'Audi A6|38000|62',
+'Mercedes CLS|11000|35',
+'Volkswagen Passat CC|45678|5',
+'Drive : Audi A6 : 543 : 47',
+'Drive : Mercedes CLS : 94 : 11',
+'Drive : Volkswagen Passat CC : 69 : 8',
+'Refuel : Audi A6 : 50',
+'Revert : Mercedes CLS : 500',
+'Revert : Audi A6 : 30000',
+'Stop']);
+
+console.log("______")
+
+needForSpeed([
+'4',
+'Lamborghini Veneno|11111|74',
+'Bugatti Veyron|12345|67',
+'Koenigsegg CCXR|67890|12',
+'Aston Martin Valkryie|99900|50',
+'Drive : Koenigsegg CCXR : 382 : 82',
+'Drive : Aston Martin Valkryie : 99 : 23',
+'Drive : Aston Martin Valkryie : 2 : 1',
+'Refuel : Lamborghini Veneno : 40',
+'Revert : Bugatti Veyron : 2000',
+'Stop']) */
+
+
+
 
 
 
 
 
     
-    // друг
+// Another
 
 
 /* function needForSpeed(arr) {
