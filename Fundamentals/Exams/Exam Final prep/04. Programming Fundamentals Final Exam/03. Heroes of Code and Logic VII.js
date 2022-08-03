@@ -21,7 +21,6 @@ for (let i = 0; i < num; i++) {     //въртам през първите n е�
 //    allHeroes[name][0]      ----   под [0] е HP (hit points)
 //    allHeroes[name][1]      ----   под [1] е MP (mana points)
 
-
     for (let i = 0; i < arr.length; i++) { // минавам през елементите, които са с команди
         
         if (arr[i] === "End"){

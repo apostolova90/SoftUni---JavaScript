@@ -59,7 +59,7 @@ function pirates(arr) {
             }
         }
     }
-
+    
 // при поличаване на команда "End", проверяваме дали има останали цели и:
 
     if (Object.keys(allCities).length > 0){
