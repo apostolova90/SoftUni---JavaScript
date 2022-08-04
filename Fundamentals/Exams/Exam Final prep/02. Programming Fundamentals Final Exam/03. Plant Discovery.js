@@ -1,7 +1,6 @@
 
 // АЗ
 
-
 function plantDiscovery(arr) {
 
     let plantColection = {};
@@ -23,7 +22,7 @@ function plantDiscovery(arr) {
     }
 
 
-    for (let i = 0; i < arr.length; i++) {
+    for (let i = 0; i < arr.length; i++) { // когато имаме повече от един разделители в инпута
         
         if (arr[i] === "Exhibition"){
             break;
@@ -56,15 +55,15 @@ function plantDiscovery(arr) {
             let plant = splitted[0];
             if (!plantColection.hasOwnProperty(plant)) { // проверяваме дали растението го НЯМА в глявния масив
                 console.log("error"); //ако го няма, принтираме това
-            } else {
-                plantColection[plant].splice(1, plantColection[plant].length - 1); // ако го ИМА, махаме всички рейтинги
+            } else {// ако го ИМА, махаме всички рейтинги, като започваме от 1, защото на 0 позиция се намира rarity, а на 1 ratings
+                plantColection[plant].splice(1, plantColection[plant].length - 1); // махане на стойност от масив // махане на стойност от обект
             }
         }
     }
 
     console.log("Plants for the exhibition:");
 
-
+// въртене през стойностите:
    for (let key of Object.keys(plantColection)) { //минаваме през всички ключове в обекта (['Arnoldii', 'Woodii', 'Welwitschia']):
 
         let totalRating = 0;
@@ -100,14 +99,124 @@ plantDiscovery([
 "Reset: Arnoldii",
 "Exhibition"]);
 
-/* plantDiscovery([
+plantDiscovery([
 "2",
 "Candelabra<->10",
 "Oahu<->10",
 "Rate: Oahu - 7",
 "Rate: Candelabra - 6",
 "Exhibition"])
- */
+
+
+
+
+
+
+
+
+// АЗ
+
+/* function plantDiscovery(arr) {
+
+    let allPlants = {};
+    let num = arr.shift();
+
+    for (let i = 0; i < num; i++){
+        let tokens = arr.shift().split("<->");
+        let plant = tokens[0];
+        let rarity = Number(tokens[1]);
+        if (!allPlants.hasOwnProperty(plant)){
+            allPlants[plant] = [];
+            allPlants[plant].push(rarity);
+        } else {
+            allPlants[plant][0] = rarity;
+        }
+    }
+
+    for (let i = 0; i < arr.length; i++){
+        
+        if (arr[i] === "Exhibition"){
+            break;
+        }
+
+        let lineInfo = arr[i].split(": ");
+        let command = lineInfo[0];
+        let tokens = lineInfo[1].split(' - ');
+
+        if (command === "Rate"){
+            let plant = tokens[0];
+            let rating = Number(tokens[1]);
+            if (!allPlants.hasOwnProperty(plant)){
+                console.log("error")
+            } else {
+                allPlants[plant].push(rating);
+            }
+        }
+
+        if (command === "Update"){
+            let plant = tokens[0];
+            let newRerity = Number(tokens[1]);
+            if (!allPlants.hasOwnProperty(plant)){
+                console.log("error")
+            } else {
+                allPlants[plant][0] = newRerity;
+            }
+        }
+
+        if (command === "Reset"){
+            let plant = tokens[0];
+            if (!allPlants.hasOwnProperty( plant )){
+                console.log("error")
+            } else {
+                allPlants[plant].splice(1, allPlants[plant].length - 1);
+            }   
+        }
+    }
+
+    console.log("Plants for the exhibition:");
+
+    for (let key of Object.keys(allPlants)) { 
+
+        let totalRating = 0;
+        let count = 0;
+
+        for (let i = 1; i < allPlants[key].length; i++) { 
+                                                               
+            totalRating += allPlants[key][i]; 
+            count++;       
+        }
+
+        let averageRating = totalRating / count;
+        if (allPlants[key].length === 1) { 
+            console.log(`- ${key}; Rarity: ${allPlants[key][0]}; Rating: 0.00`);
+        } else { 
+            console.log(`- ${key}; Rarity: ${allPlants[key][0]}; Rating: ${averageRating.toFixed(2)}`);
+        }
+    }
+}
+plantDiscovery([
+"3",
+"Arnoldii<->4",
+"Woodii<->7",
+"Welwitschia<->2",
+"Rate: Woodii - 10",
+"Rate: Welwitschia - 7",
+"Rate: Arnoldii - 3",
+"Rate: Woodii - 5",
+"Update: Woodii - 5",
+"Reset: Arnoldii",
+"Exhibition"]);
+
+plantDiscovery([
+"2",
+"Candelabra<->10",
+"Oahu<->10",
+"Rate: Oahu - 7",
+"Rate: Candelabra - 6",
+"Exhibition"]) */
+
+
+
 
 
 

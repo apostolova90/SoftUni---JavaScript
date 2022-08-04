@@ -70,9 +70,6 @@ secretChat([
 
 
 
-
-
-
 // АЗ
 
 /* function secretChat(array){
