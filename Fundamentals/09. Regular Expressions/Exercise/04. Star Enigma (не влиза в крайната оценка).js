@@ -18,14 +18,14 @@ function starEnigma(input){
     let decryptedMessage = encryptedMessages.split("").map((c) => String.fromCharCode(c.charCodeAt(0) - count)).join("")
         // за всеки знак от стринга, взимаме числовата му равностойност от ASCII таблицата, 
         // вадим от нея count-a 
-        // и след това обръщаме числото, в новия знак от ASCII таблицата
+        // и след това обръщаме всяко число в новия знак от ASCII таблицата
 
     let regexMatch = decryptedMessage.match(regex);
     if (regexMatch) { // проверяваме дали има regex match
         if (regexMatch[2] === "A"){ // и коя от двете букви има - "A" за attacked ИЛИ "D" за destroyed
-            attacked.push(regexMatch[1]) // ако има, пушваме името на планетата в масива attacked
+            attacked.push(regexMatch[1]) // ако има, пушваме ИМЕТО на планетата в масива attacked, като "attacked" е името на ключа
         } else if (regexMatch[2] === "D"){
-            destroyed.push(regexMatch[1]) // ако има, пушваме името на планетата в масива attacked
+            destroyed.push(regexMatch[1]) // // ако има, пушваме ИМЕТО на планетата в масива destroyed, като "destroyed" е името на ключа
         }
     }
 }

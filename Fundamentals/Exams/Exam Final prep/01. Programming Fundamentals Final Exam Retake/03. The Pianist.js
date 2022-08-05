@@ -30,7 +30,7 @@ for (let i = 0; i < arr.length; i++) { // след това започвамe д
             let composer = tokens[2]; // записваме втората променлива
             let key = tokens[3]; // записваме третата променлива
             if (!pieces.hasOwnProperty(piece)) { // проверяваме дали piese го НЯМА в глявния масив
-                pieces[piece] = []; // ако го няма добавяме елемнтите в главния обект
+                pieces[piece] = []; // ако го няма добавяме още един нов ключ в обекта
                 pieces[piece].push(composer);
                 pieces[piece].push(key);
                 console.log(`${piece} by ${composer} in ${key} added to the collection!`); // и принтираме:
