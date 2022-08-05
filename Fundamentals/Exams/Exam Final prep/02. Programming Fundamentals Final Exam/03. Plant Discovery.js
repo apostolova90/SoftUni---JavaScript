@@ -1,4 +1,3 @@
-
 // АЗ
 
 function plantDiscovery(arr) {
@@ -106,6 +105,116 @@ plantDiscovery([
 "Rate: Oahu - 7",
 "Rate: Candelabra - 6",
 "Exhibition"])
+
+
+
+
+
+
+
+
+
+
+//AЗ
+
+/* function plantDiscovery(arr) {
+
+    let garden = {};
+
+    let num = arr.shift();
+
+    for (let i = 0; i < num; i++) {
+        let tokens = arr.shift().split("<->")
+        let plant = tokens[0];
+        let rarity = Number(tokens[1]);
+
+        if (!garden.hasOwnProperty(plant)){
+            garden[plant] = [];
+            garden[plant].push(rarity);
+        }
+    }
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === "Exhibition"){
+            break;
+        }
+
+        let tokens = arr[i].split(": ")
+        let commant = tokens[0];
+        let others = tokens[1].split(" - ")
+        let plant = others[0];
+
+        if (commant === "Rate"){
+            let rating = Number(others[1]);
+            if (garden.hasOwnProperty(plant)){
+                garden[plant].push(rating);
+            } else {
+                console.log("error")
+            }
+        }
+
+        if (commant === "Update"){
+            let newRarity = Number(others[1]);
+            if (garden.hasOwnProperty(plant)){
+                garden[plant][0] = newRarity;
+            } else {
+                console.log("error")
+            }
+        }
+
+        if (commant === "Reset"){
+            if (garden.hasOwnProperty(plant)){
+                garden[plant].splice(1, garden[plant].length - 1);
+            } else {
+                console.log("error")
+            }
+        }
+    }
+
+    console.log("Plants for the exhibition:");
+
+    for (let key of Object.keys(garden)) { //минаваме през всички ключове в обекта (['Arnoldii', 'Woodii', 'Welwitschia']):
+
+        let totalRating = 0;
+        let count = 0;
+
+        for (let i = 1; i < garden[key].length; i++) { // минаваме през всеки елемент в стойността към все ключ, като започваме от 1 (i = 1), защото на 0ва позиция се намира rarety- тo, което има само ч яисло за стойност и и не ни интересува
+                                                               // [4]
+                                                               // [5, 10, 5]
+                                                               // [2, 7]
+            totalRating += garden[key][i]; // и на всяко завъртане, смятаме общия сбор
+            count++;       // както и броя на оценките
+        }
+
+        let averageRating = totalRating / count;
+        if (garden[key].length === 1) { // ако имаме само една оценка, то рейтинга трябва да е 0
+            console.log(`- ${key}; Rarity: ${garden[key][0]}; Rating: 0.00`);
+        } else { // ако оценките са повече от една, принтираме сметнатия everageRating
+            console.log(`- ${key}; Rarity: ${garden[key][0]}; Rating: ${averageRating.toFixed(2)}`);
+        }
+    }
+
+}
+plantDiscovery([
+"3",
+"Arnoldii<->4",
+"Woodii<->7",
+"Welwitschia<->2",
+"Rate: Woodii - 10",
+"Rate: Welwitschia - 7",
+"Rate: Arnoldii - 3",
+"Rate: Woodii - 5",
+"Update: Woodii - 5",
+"Reset: Arnoldii",
+"Exhibition"]);
+
+plantDiscovery([
+"2",
+"Candelabra<->10",
+"Oahu<->10",
+"Rate: Oahu - 7",
+"Rate: Candelabra - 6",
+"Exhibition"]) */
 
 
 
