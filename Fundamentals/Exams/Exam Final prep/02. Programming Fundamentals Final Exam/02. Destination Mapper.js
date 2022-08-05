@@ -29,6 +29,37 @@ destionationMapper("ThisIs some InvalidInput");
 
 
 
+// АЗ
+
+/* function destionationMapper(text){
+
+let travelPoints = 0; 
+let regex = /(=|\/)(?<destinations>[A-Z][A-Za-z]{2,})\1/g; 
+let allStops = [];
+
+let match = regex.exec(text)
+
+while (match !== null){
+    let destination = match.groups['destinations']
+
+    travelPoints += destination.length;
+    allStops.push(destination)
+    match = regex.exec(text);
+}
+
+console.log(`Destinations: ${allStops.join(", ")}`)
+console.log(`Travel Points: ${travelPoints}`)
+}
+destionationMapper("=Hawai=/Cyprus/=Invalid/invalid==i5valid=/I5valid/=i=");
+destionationMapper("ThisIs some InvalidInput"); */
+
+
+
+
+
+
+
+
 
 // АЗ
 
