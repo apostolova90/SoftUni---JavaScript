@@ -71,8 +71,7 @@ activationKeys(([
 "Contains>>>-rocks",
 "Flip>>>Upper>>>2>>>8",
 "Flip>>>Lower>>>5>>>11",
-"Generate"])
-)
+"Generate"]))
 
 
 

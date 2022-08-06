@@ -81,8 +81,7 @@ thePianist([
     'Add|Fur Elise|Beethoven|C# Minor',
     'Remove|Clair de Lune',
     'ChangeKey|Moonlight Sonata|C# Major',
-    'Stop'
-])
+    'Stop'])
 
 
 
