@@ -15,6 +15,7 @@ for (let i = 0; i < number; i++){  // завъртаме през дадения
     if (!match) {  // АКО REGEX-a НЕ РАБОТИ
         console.log(`Invalid barcode`)
     }
+    
 
     while (match !== null){ // ако проверката връща различно от null
         let food = match.groups['pass']; // създаваме нова променлива, в която записваме всеки отговарящ елемeнт - 'FreshFisH'......
