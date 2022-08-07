@@ -19,4 +19,3 @@ specialNumbers(["11"]);
 specialNumbers(["16"]);
 
 
-... решена от друг....
