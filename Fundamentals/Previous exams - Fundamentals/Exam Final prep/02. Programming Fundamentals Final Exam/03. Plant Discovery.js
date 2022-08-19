@@ -1,5 +1,3 @@
-// АЗ
-
 function plantDiscovery(arr) {
 
     let plantColection = {};
@@ -110,13 +108,6 @@ plantDiscovery([
 
 
 
-
-
-
-
-
-//AЗ
-
 /* function plantDiscovery(arr) {
 
     let garden = {};
@@ -222,8 +213,6 @@ plantDiscovery([
 
 
 
-
-// АЗ
 
 /* function plantDiscovery(arr) {
 

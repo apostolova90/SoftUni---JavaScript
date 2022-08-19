@@ -1,6 +1,3 @@
-
-// АЗ
-
 function destionationMapper(text){
     
     let regex = /(\=|\/)(?<destination>[A-Z][A-Za-z]{2,})\1/gm;
@@ -25,11 +22,6 @@ destionationMapper("ThisIs some InvalidInput");
 
 
 
-
-
-
-
-// АЗ
 
 /* function destionationMapper(text){
 
@@ -56,13 +48,6 @@ destionationMapper("ThisIs some InvalidInput"); */
 
 
 
-
-
-
-
-
-// АЗ
-
 /* function destionationMapper(data){
 
     let pattern = /([=|/])(?<destination>[A-Z]{1}[A-Za-z]{2,})\1/g;
@@ -87,7 +72,7 @@ destionationMapper("ThisIs some InvalidInput"); */
 
 
 
-// Anotehr
+// Another
 
 /* function destinationMapper(string) {
 

@@ -1,5 +1,3 @@
-//АЗ
-
 function worldTour(array) {
 
 let stops = array.shift()
@@ -71,8 +69,7 @@ worldTour([
     
     
     
-    
-    //АЗ
+
 
 /* function worldTour(array) {
   
@@ -138,14 +135,7 @@ worldTour([
      */
     
 
-
-
-
-
-
-
-
-//АЗ
+    
 
 /* function worldTour(array) {
 

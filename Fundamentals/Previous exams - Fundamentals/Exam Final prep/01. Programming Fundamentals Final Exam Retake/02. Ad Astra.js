@@ -1,6 +1,3 @@
-
-// АЗ
-
 function adAstra(arr){
 
     let pattern = /(?<delimiter>\#|\|)(?<food>[A-Za-z\s]+)\1(?<exp>\d{2}\/\d{2}\/\d{2})\1(?<calories>\d{1,5})\1/g
