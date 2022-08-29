@@ -1,6 +1,5 @@
 function login(input) {
-              
-
+            
 let index = 0;
 let username = input[index];
 index++;

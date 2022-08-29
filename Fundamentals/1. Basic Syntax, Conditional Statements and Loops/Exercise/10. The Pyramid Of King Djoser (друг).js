@@ -1,5 +1,3 @@
-// друг:
-
 function thePyramidOfKingDjoser(base, increment) {
     let stones = 0;
     let marbles = 0;
