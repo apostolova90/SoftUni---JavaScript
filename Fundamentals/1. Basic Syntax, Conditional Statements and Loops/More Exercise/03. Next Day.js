@@ -2,7 +2,7 @@ function days(year, month, day) {
 
   let date = new Date(year, month - 1, day + 1)
 
-//или:  let date = new Date(year, month - 1, day);
+//OR:  let date = new Date(year, month - 1, day);
 //     date.setDate(date. getDate() + 1);
 
     console.log(`${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`); // преобразуване на датата в цифри - 
@@ -15,7 +15,6 @@ days(2020, 3, 24);
 days(1, 1, 1);
 
 
-// друго решение
 
 /* function solve(year, month, day) {
     let currentDate = new Date(year, month - 1, day); // get the date from the input so we can convert to milliseconds
