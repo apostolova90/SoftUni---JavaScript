@@ -1,6 +1,3 @@
-
-/* ДРУГ */
-
 function sortNumber(a, b, c) {
  
  
