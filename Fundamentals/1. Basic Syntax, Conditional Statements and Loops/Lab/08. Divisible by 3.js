@@ -8,7 +8,7 @@ function divisibleBy3(){
 divisibleBy3()
 
 
-/* Друго решение:
+/*
 
 function divisibleBy3(){
     for (let i = 3; i <= 100; i+=3){
