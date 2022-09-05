@@ -1,5 +1,4 @@
 
-
 // с IF
 
 function integerAndFloat(num1, num2, num3){

@@ -1,3 +1,6 @@
+
+// Another
+
 function integerAndFloat(num1, num2, num3){
 
     let result = num1 + num2 + num3;
