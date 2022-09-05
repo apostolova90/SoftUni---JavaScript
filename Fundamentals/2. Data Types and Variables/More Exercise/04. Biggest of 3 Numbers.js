@@ -1,7 +1,3 @@
-
-
-/* ДРУГ */
-
 function biggestOf3Numbers(num1, num2, num3) {
     let myArr = [num1, num2, num3];
     let biggestNum = Number.MIN_SAFE_INTEGER;

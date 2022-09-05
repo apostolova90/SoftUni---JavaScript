@@ -1,6 +1,3 @@
-
-/* ДРУГ */
-
 function primeNumberChecker(number) {
     let isPrime = true;
     for (let i = 2; i <= Math.floor(number / 2); i++) {

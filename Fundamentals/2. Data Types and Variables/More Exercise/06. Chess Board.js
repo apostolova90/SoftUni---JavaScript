@@ -1,8 +1,3 @@
-
-
-/* ДРУГ */
-
-
 function chessBoard(n) {
     let color = 'white';
   

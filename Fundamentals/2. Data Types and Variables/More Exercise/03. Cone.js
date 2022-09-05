@@ -1,6 +1,3 @@
-
-/* ДРУГ */
-
 function cone(heigh, radius) {
     let s = Math.sqrt(heigh * heigh + radius * radius);
     let volume = (Math.PI * heigh * heigh * radius) / 3;
