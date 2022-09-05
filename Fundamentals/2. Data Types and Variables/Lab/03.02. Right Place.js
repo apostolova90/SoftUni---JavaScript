@@ -1,4 +1,4 @@
-// с if
+// с IF
 
 function rightPlace(firstString, char, secondString){
     let newString = firstString.replace("_",char)
