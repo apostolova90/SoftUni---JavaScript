@@ -1,5 +1,3 @@
-// по-трудно решение
-
 function solve(num){
 
     num = num.toString();
