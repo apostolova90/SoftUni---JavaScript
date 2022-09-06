@@ -1,6 +1,3 @@
-/* 
-ДРУГ */
-
 function ladyBugs(arr) {
     let sizeOfField = arr[0];
     let initialIndexes = arr[1];
