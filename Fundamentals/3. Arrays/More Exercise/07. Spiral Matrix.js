@@ -1,6 +1,3 @@
-
-/* ДРУГ */
-
 function matrix(n1, n2) {
     let startRow = 0;
     let endRow = n1 - 1;
