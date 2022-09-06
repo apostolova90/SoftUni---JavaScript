@@ -1,6 +1,3 @@
-
-/* друг */
-
 function diagonalAttack(arr) {
     let firstDiag = 0;
     let secondDiag = arr.length - 1;
