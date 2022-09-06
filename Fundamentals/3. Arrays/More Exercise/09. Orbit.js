@@ -1,6 +1,3 @@
-/* 
-ДРУГ */
-
 function orbit([rows, cols, x, y]) {
     let matrix = [];
   
