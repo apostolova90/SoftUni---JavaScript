@@ -1,8 +1,3 @@
-
-/* 
-ДРУГ
- */
-
 function printDNA(helixLength) {
     let stringHelix = 'ATCGTTAGGG';
     let helixArr = stringHelix.split('');
