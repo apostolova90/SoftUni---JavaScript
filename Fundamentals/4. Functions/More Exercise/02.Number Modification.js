@@ -1,7 +1,3 @@
-
-/* 
-ДРУГ */
-
 function modificationNumber(number) {
     let num = number.toString();
     let sum = 0;
