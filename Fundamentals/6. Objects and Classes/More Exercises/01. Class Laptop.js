@@ -1,6 +1,3 @@
-
-//ДРУГ
-
 class Laptop{
     constructor(info, quality){ // взимаме инфото отдолу - (let info = {producer: "Lenovo", age: 1, brand: "Legion"})
         this.info = info;

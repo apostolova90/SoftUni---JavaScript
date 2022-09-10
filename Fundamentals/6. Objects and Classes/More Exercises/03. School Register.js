@@ -1,4 +1,3 @@
-
 function schoolRegister(input) {
     const passedStudents = [];  // Array of student objects with grade higher than 2.99
    
