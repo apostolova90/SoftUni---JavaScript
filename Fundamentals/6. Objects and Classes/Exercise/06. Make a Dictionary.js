@@ -1,10 +1,3 @@
-
-
-
-// ДРУГ
-
-
-
 function makeADictionary(arr) {
     let dictionary = {};
  
