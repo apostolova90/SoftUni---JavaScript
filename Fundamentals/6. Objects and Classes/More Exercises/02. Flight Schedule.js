@@ -1,5 +1,3 @@
-// решение с масивите
-
 function flightSchedule(input) {
     const flights = input.shift(); // Array for all the flights on a specific sector - ['WN269 Delaware', 'FL2269 Oregon'...........].
     const newStatuses = input.shift(); // Array with the newly changed statuses - ['DL2120 Cancelled', 'WN612 Cancelled'............]
