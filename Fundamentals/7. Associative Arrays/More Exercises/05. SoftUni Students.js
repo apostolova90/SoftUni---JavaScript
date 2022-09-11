@@ -1,5 +1,3 @@
-// Another
-
 function softUniStudents(arr) {
 
     let courses = {};
