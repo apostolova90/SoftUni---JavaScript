@@ -1,8 +1,3 @@
-
-// Another
-
-// мой коментари
-
 function bookShelf(arr) {
   let shelfs = {};
   let genres = [];
