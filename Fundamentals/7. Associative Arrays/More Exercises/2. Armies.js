@@ -1,8 +1,3 @@
-
-//ДРУГ
-
-// мой коментари
-
 function armies(arr) {
 
     let leaders = {};

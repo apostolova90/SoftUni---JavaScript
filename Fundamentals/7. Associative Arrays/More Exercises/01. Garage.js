@@ -1,6 +1,3 @@
-
-// АЗ
-
 function garage(array) {
 
     let allGarages = {};
