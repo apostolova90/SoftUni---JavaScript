@@ -1,5 +1,3 @@
-// АЗ + споделен с колеги
-
 function lettersChangeNumbers(input) {
 
 let allStrings = input.split(' ');
