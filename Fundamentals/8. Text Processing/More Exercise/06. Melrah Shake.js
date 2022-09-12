@@ -1,9 +1,3 @@
-
-// Another
-
-// мой коментари
-
-
 function malrahShake(arr){
     let text = arr[0]; // 'astalavista baby'
     let pattern = arr[1] // 'sta'
