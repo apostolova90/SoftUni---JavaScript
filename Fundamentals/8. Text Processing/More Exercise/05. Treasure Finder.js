@@ -1,7 +1,3 @@
-
-// Another:
-// мой коментари
-
 function treasureFinder(inputArr) {
     
     let keySeq = inputArr.shift().split(' '); // ['1', '2', '1', '3']
