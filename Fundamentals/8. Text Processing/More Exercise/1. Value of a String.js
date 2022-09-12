@@ -1,5 +1,3 @@
-// АЗ
-
 function valueOfAString(arr){
 
     let string = arr.shift().split("")
