@@ -1,6 +1,3 @@
-
-// АЗ 
-
 function emojiDetector(input) {
 
 let text = input.shift()  // първо правя масива на стринг, за да миан после през него
