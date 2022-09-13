@@ -1,7 +1,3 @@
-
-
-// АЗ
-
 function pirates(arr) {
 
     let allCities = {}
