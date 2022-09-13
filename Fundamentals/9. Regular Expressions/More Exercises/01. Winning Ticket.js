@@ -1,6 +1,3 @@
-
-//Another
-
 function winningTicket(str) {
 const VALID_TICKET_LENGTH = 20;
 const tickets = str.trim().split(/\s*,\s*/);
