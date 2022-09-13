@@ -1,5 +1,3 @@
-//Another
-
 function postOffice(input) {
     let parts = input.shift().split('|');
     let firstPart = parts[0];
