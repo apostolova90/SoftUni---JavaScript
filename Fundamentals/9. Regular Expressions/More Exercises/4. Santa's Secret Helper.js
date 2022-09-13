@@ -1,6 +1,3 @@
-//Another
-
-
 function santaSecretHelper(input) {
     const key = input.shift(); // взимаме 1ислото, с което след това ще трябва да намаляме 
     const pattern = /@(?<name>[A-Za-z]+)[^@!:>-]*!G!/;
