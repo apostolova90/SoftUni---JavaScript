@@ -1,5 +1,3 @@
-// Another
-
 function rageQuit(input = []) {
     const text = input.join('');
     const patternForDigits = /\d+/g;
