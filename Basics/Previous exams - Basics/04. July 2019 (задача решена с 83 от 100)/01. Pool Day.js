@@ -2,7 +2,7 @@ function poolDay(input) {
   const numberOfPeople = Number(input[0]);
   const priceEntrance = Number(input[1]);
   const priceDeckChair = Number(input[2]);
-  const priceAmbrella = Number(input[3]);
+  const priceUmbrella = Number(input[3]);
 
   let numberOfAmbrellasNeeded = Math.ceil(numberOfPeople * 0.5);
   let deckChairsNeeded = Math.ceil(numberOfPeople * 0.75);
