@@ -1,7 +1,7 @@
 function cinema(input){
     let type = input[0];
     let lines = Number(input[1]);
-    let coloumns = Number(input[2]);
+    let columns = Number(input[2]);
     
     let premirePrice = 12;
     let normalPrice = 7.50;
@@ -10,11 +10,11 @@ function cinema(input){
     let profit = 0;
 
     if (type === "Premiere"){
-        profit = (lines * coloumns) * premirePrice;
+        profit = (lines * columns) * premirePrice;
     } else if (type === "Normal"){
-        profit = (lines * coloumns) * normalPrice;
+        profit = (lines * columns) * normalPrice;
     } else if (type === "Discount"){
-        profit = (lines * coloumns) * discountPrice;
+        profit = (lines * columns) * discountPrice;
     }
     console.log (profit.toFixed(2));
 }
