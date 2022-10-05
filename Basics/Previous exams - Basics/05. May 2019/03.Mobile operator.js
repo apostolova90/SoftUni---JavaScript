@@ -1,13 +1,13 @@
 function mobileOperator(input) {
     let years = input[0];
-    let typeOfContarct = input[1];
+    let typeOfContract = input[1];
     let withInternetOrNot = input[2];
     let montsToPay = Number(input[3]);
 
     let priceOfPackage = 0
 
     if (years === "one"){
-        switch (typeOfContarct) {
+        switch (typeOfContract) {
             case "Small":
             priceOfPackage = 9.98;
             break;
@@ -22,7 +22,7 @@ function mobileOperator(input) {
             break;
         } 
     } else {
-        switch (typeOfContarct) {
+        switch (typeOfContract) {
             case "Small":
             priceOfPackage = 8.58;
             break;
