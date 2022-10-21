@@ -1,6 +1,3 @@
-// пререшена 27.02
-
-
 function exam(input) {
 
     const numberOfStudents = Number(input[0]);
