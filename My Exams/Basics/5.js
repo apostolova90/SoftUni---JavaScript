@@ -1,8 +1,3 @@
-//ТРУДНА
-
-// повторно решена задача, но с 90/100
-
-
 function bestPlayer(input) {
   let index = 0;
   let command = input[index];

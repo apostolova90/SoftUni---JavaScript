@@ -8,8 +8,9 @@ function sumPrimeNonPrime(input) {
         let curNum = Number(input[index]);
         if (curNum < 0) {
             console.log(`Number is negative.`)
-    } else {
+        } else {
         let isPrime = true;
+        
         for(let i = 2; i < curNum; i++) {
             if (curNum % i === 0){
                 isPrime = false;

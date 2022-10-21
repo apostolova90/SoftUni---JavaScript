@@ -1,5 +1,3 @@
-// пререшена 27.02
-
 function santa(input) {
 
     let numberOfNights = (Number(input[0] - 1));

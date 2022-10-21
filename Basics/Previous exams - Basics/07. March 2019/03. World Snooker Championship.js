@@ -53,7 +53,7 @@ if (totalPrice > 2500 && totalPrice <= 4000) {
     totalPrice = totalPrice * 0.90;
     if (pictureOrNo === "Y") {
     totalPrice += numberTickets * 40;
-}
+    }
 } else if (totalPrice > 4000){
     totalPrice = totalPrice * 0.75;
 } else { 
