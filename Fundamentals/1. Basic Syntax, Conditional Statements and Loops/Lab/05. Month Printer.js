@@ -1,6 +1,6 @@
 function monthPrinter (number){
     switch (number){
-        case 1:                                    // без кавички на цифрата в case- а
+        case 1:                                    
             console.log("January")
             break;
         case 2:
