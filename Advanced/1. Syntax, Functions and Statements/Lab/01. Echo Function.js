@@ -1,5 +1,6 @@
-function echoFunction (num){
-
-
+function echoFunction (input){
+    let text = input;
+    console.log (text.length);
+    console.log (text);
 }
-echoFunction()
+echoFunction(['Hello, JavaScript!'])
