@@ -1,6 +1,7 @@
 function echoFunction (input){
     let text = input;
-    console.log (text.length);
+    let textLenth = text.length
+    console.log (textLenth);
     console.log (text);
 }
-echoFunction(['Hello, JavaScript!'])
+echoFunction("Hello, JavaScript!")
