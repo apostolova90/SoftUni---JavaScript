@@ -1,6 +1,5 @@
 function daysOfWeek(day){
 
-    let resultName;
 switch (day){
     case "Monday":;
         console.log("1");
@@ -25,8 +24,7 @@ switch (day){
         break;
     default: 
     console.log ("error");
-}
-
+    }
 }
 daysOfWeek('Monday');
 daysOfWeek('Friday');
