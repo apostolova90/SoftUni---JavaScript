@@ -1,6 +1,6 @@
 function starEnigma(input){
 
-    let messages = Number(input.shift()) // звимам броя на съобщенията
+    let messages = Number(input.shift()) // ввимам броя на съобщенията
 
     let regex = /@([A-Z][a-z]+)[^@\-!:>]*:\d+[^@\-!:>]*!(A|D)![^@\-!:>]*->\d+/;
     let attacked = [];
