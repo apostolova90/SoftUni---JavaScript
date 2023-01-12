@@ -1,6 +1,3 @@
-
-//Another
-
 function netherRealms(text) {
     //Focus on solving the problem.
 
