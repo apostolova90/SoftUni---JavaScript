@@ -7,6 +7,29 @@
     <title>DOM Part 1</title>
 </head>
 <body>
-    <h1>Hello DOM!</h1>
+    <h1 id="heading">Hello DOM!</h1>
+
+    <ul>
+        <li>BMW</li>
+        <li>Mercedes</li>
+        <li>Audi</li>
+    </ul>
+
+    <!-- евенти и как да ги изпилзваме -->
+    <button onclick="changeTitle()">Title</button>
+
+    <!-- как да изпълняваме JavaScript  -->
+    <script>
+
+        // how to make changes 
+        function changeTitle(){
+        let headingElement = document.getElementById('heading'); // селектираме елемента
+        headingElement.textContent = 'Hello from JS!' // променяме съдържанието, ако новото е само текст
+        headingElement.innerHTML = 'Hello from <em>JS</em>!' // променяме съдържанието, но в този случай можем да сложим и някакъв HTML (например да направим текста наклонен)
+        }
+        </script>
+
+    <script src="demo.js"></script>
+
 </body>
 </html>
