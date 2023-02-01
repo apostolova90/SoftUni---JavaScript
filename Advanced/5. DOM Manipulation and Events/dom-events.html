@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>DOM events | Movie list</h1>
+
+    <ul id="movie-list">
+        <li>The Matrix</li>
+    </ul>
+
+
+<!--   EVENETS -->
+
+    <input type="text" name="title" />
+    <button onclick="onAddClick()">Add</button>
+
+    <script>
+        function onAddClick() {
+            let movieInputElement = document.querySelector('input[name="title"]'); // взиамме стойността на филма - този елемнт, който има име "title"
+            let movieListElements = document.getElementById('movie-list');
+
+            let movieLiElement = document.createElement('li'); // създавам нов елемент
+            movieLiElement.textContent = movieInputElement.value // задавам какво да му бъде съдържанието
+            movieListElements.appendChild(movieLiElement)// залепям го
+        }
+    </script>
+
+</body>
+</html>
