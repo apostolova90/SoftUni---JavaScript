@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>DOM events | Movie list</h1>
+
+    <ul id="movie-list">
+        <li>The Matrix</li>
+        <li>The Lord of the Rings</li>
+        <li>Man of steel</li>
+        <li>The Case for Christ</li>
+    </ul>
+
+
+    <script>
+        let movieElements = document.querySelectorAll('#movie-list li') // взимаме всеки филм
+        movieElements.forEach(el => { // за всеки филм
+            el.addEventListener('click', (e) => { // прилагаме следната функция
+                 = 'line-through'; // на сегашната позиция, на която съм кликнала да смени стила
+            });
+        });
+    
+    </script>
+
+</body>
+</html>
