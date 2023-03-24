@@ -52,7 +52,7 @@ partyTime([
 'Ce8vwPmE',
 'SVQXQCbc']);
 
-/* partyTime([
+partyTime([
 'm8rfQBvl',
 'fc1oZCE0',
 'UgffRkOn',
@@ -81,4 +81,4 @@ partyTime([
 'fc1oZCE0',
 'UgffRkOn',
 '7ugX7bm0',
-'9CQBGUeJ']); */
+'9CQBGUeJ']);
