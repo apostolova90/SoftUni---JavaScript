@@ -22,3 +22,6 @@ function pascalCaseSplitter(string) {
 pascalCaseSplitter('SplitMeIfYouCanHaHaYouCantOrYouCan');
 pascalCaseSplitter('HoldTheDoor');
 pascalCaseSplitter('ThisIsSoAnnoyingToDo');
+
+
+
