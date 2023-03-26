@@ -59,7 +59,7 @@ case "residential":
     break;
     }
 }
-/* roadRadar(40, 'city');
-roadRadar(21, 'residential') */
+roadRadar(40, 'city');
+roadRadar(21, 'residential')
 roadRadar(120, 'interstate')
-/* roadRadar(200, 'motorway') */
+roadRadar(200, 'motorway')
