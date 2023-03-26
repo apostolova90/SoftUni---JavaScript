@@ -1,5 +1,5 @@
-//Another
 
+//Another
 
 function equalNeighbors(matrix) {
     let pairsCounter2 = 0;
