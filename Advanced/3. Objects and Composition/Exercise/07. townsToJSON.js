@@ -1,6 +1,5 @@
+
 // Another
-
-
 
 function townsToJSON(array) {
     let resultArr = [];
