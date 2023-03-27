@@ -12,4 +12,4 @@ function caloriesObject(array){
     console.log(obj)
 }
 caloriesObject(['Yoghurt', '48', 'Rise', '138', 'Apple', '52']);
-/* caloriesObject(['Potato', '93', 'Skyr', '63', 'Cucumber', '18', 'Milk', '42']) */
+caloriesObject(['Potato', '93', 'Skyr', '63', 'Cucumber', '18', 'Milk', '42'])
