@@ -1,6 +1,5 @@
+
 // Another
-
-
 
 function rectangle(width, height, color) {
     let colorArr = color.split('');
